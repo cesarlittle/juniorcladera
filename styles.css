@@ -1,0 +1,443 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+button {
+    cursor: pointer;
+}
+
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #000;
+    color: #fff;
+    font-weight: bold;
+}
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding-left:65px;
+}
+.menu a {
+    color: #fff;
+    font-weight: bold;
+}
+.logo {
+    width: 70px;
+    height: auto;
+    align-items: center;
+}
+.socials {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding-right: 65px;
+}
+.socials img {
+    width: 20px;
+    height: auto;
+}
+
+/* Section Styles */
+section {
+    padding: 50px 20px;
+    text-align: center;
+    
+}
+.tour {
+    background-image: url('public/img/1_PORTADA.png');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.tour button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+/* Slider Styles */
+.slider1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #000;
+    padding: 20px;
+    padding-left: 200px;
+    padding-right: 400px;
+    padding-top: 75px;
+    padding-bottom: 75px;
+    
+}
+.slider {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #000;
+    padding: 30px;
+    padding-top: 75px;
+    padding-bottom: 75px;
+    
+}
+.slider1 iframe {
+    width: 800px; /* Ajusta el ancho */
+    height: 450px; /* Ajusta la altura */
+    max-width: 100%; /* Asegúrate de que el video sea responsive */
+    border-radius: 10px; /* Opcional, añade bordes redondeados */
+    margin: 0 20px; /* Espaciado entre el video y los botones */
+}
+.slider iframe {
+    width: 800px; /* Ajusta el ancho */
+    height: 450px; /* Ajusta la altura */
+    max-width: 100%; /* Asegúrate de que el video sea responsive */
+    border-radius: 10px; /* Opcional, añade bordes redondeados */
+    margin: 0 20px; /* Espaciado entre el video y los botones */
+}
+.slider1 img {
+    width: 300px;
+    height: auto;
+    border-radius: 7px;
+}
+.slider-content {
+    text-align: center;
+}
+.slider-content h1 {
+    margin: 0;
+    color: #fff;
+    text-align: center;
+    letter-spacing: 5px;
+    font-size: 40px;
+    
+}
+.slider-content h4 {
+    margin: 10px 0;
+    color: #ffffff;
+    text-align: center;
+    letter-spacing: 2px;
+    
+    
+}
+.slider button {
+    background: transparent;
+    border: 2px solid red;
+    color: red;
+    border-radius: 15px;
+    padding: 15px;
+    text-align: center;
+
+}
+.slider-controls {
+    right: 10px; /* Alinea los controles hacia la derecha */
+    display: flex; /* Cambia la disposición a un diseño de línea (flexbox) */
+    gap: 20px; /* Añade una separación de 40px entre los botones */
+    position: relative;
+
+}
+
+.slider-controls button {
+    background: transparent;
+    border: 2px solid red;
+    color: red;
+    border-radius: 15px;
+    padding: 15px;
+    text-align: center;   
+    position: relative;
+    top: 150px;
+    left: 150px;         
+}
+.slider1 button {
+    background: transparent;
+    border: 2px solid red;
+    color: red;
+    border-radius: 15px;
+    padding: 15px;
+    text-align: center;
+
+}
+.slider1-controls {
+    right: 10px; /* Alinea los controles hacia la derecha */
+    display: flex; /* Cambia la disposición a un diseño de línea (flexbox) */
+    gap: 20px; /* Añade una separación de 40px entre los botones */
+    position: relative;
+
+}
+
+.slider1-controls button {
+    background: transparent;
+    border: 2px solid red;
+    color: red;
+    border-radius: 15px;
+    padding: 15px;
+    text-align: center;   
+    position: relative;
+    top: 150px;
+    left: 150px;         
+}
+/* Ecommerce Styles */
+/* Estilización general */
+.ecommerce {
+    text-align: center; /* Centra el título */
+    padding: 30px;
+    background-color: #000;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    
+}
+.boton-eco {
+    background-color: red;
+    color: rgb(0, 0, 0);
+    border-radius: 7px;
+    padding: 5px;
+    text-align: center;  
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;   
+
+}
+
+/* Título */
+.titulo-ecommerce {
+    font-size: 28px;
+    margin-bottom: 60px;
+    color: white;
+    background-color: #000;
+}
+
+/* Contenedor de ítems */
+.items-container {
+    display: flex; /* Flexbox para alinear horizontalmente */
+    justify-content: center; /* Centra los ítems horizontalmente */
+    gap: 60px; /* Espaciado entre ítems */
+    flex-wrap: wrap; /* Permite que los ítems se ajusten si no caben */
+    background-color: #000;
+}
+
+/* Estilo para cada ítem */
+.item {
+    text-align: center; /* Centra el contenido dentro del ítem */
+    width: 300px; /* Ancho de cada ítem */
+}
+
+.item img {
+    max-width: 100%; /* Escala la imagen dentro del contenedor */
+    border-radius: 7px; /* Bordes redondeados */
+    margin-bottom: 10px; /* Separación entre la imagen y el texto */
+}
+
+.item p {
+    font-size: 16px;
+    color: #ffffff;
+    font-family: arial,
+}
+
+/* Join Section Styles */
+.join {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background-image: url('public/img/fondo.jpg');
+    
+}
+.join img {
+    width: 400px;
+    height: auto;
+    border-radius: 10px;
+}
+.join-form {
+    text-align: center;
+    color: #fff;
+}
+
+.join-form input, .join-form select {
+    display: block;
+    width: 300px;
+    margin: 10px 0;
+    padding: 10px;
+    border: 2px solid red;
+    border-radius: 5px;
+    color: rgba(255,255,255, 0,7);
+}
+/* Ajustes para el contenedor del label */
+.checkbox-container {
+    display: flex; /* Alinea el checkbox y el texto en línea */
+    align-items: center; /* Asegura alineación vertical */
+    gap: 10px; /* Espacio entre el checkbox y el texto */
+    margin: 10px 0; /* Espacio superior e inferior */
+    text-align: left; /* Alinea el texto a la izquierda */
+    font-size: 14px; /* Ajusta el tamaño del texto */
+    color: #fff; /* Color del texto */
+}
+
+/* Ajustes específicos para el checkbox */
+.checkbox-container .checkbox {
+    width: 18px; /* Ajusta el tamaño del checkbox */
+    height: 18px;
+    margin: 0; /* Elimina cualquier margen por defecto */
+    accent-color: red; /* Cambia el color del checkbox a rojo */
+}
+
+/* Estilo para el texto pequeño debajo */
+.join-form small {
+    display: block;
+    margin-top: 5px;
+    font-size: 12px;
+    color: rgb(255, 255, 255);
+    text-align: left;
+}
+
+/* Botón de suscripción */
+.join-form button {
+    background-color: red;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+/* Contenedor para los dos campos de input */
+.input-group {
+    display: flex; /* Alinea los elementos horizontalmente */
+    gap: 100px; /* Espacio entre los inputs */
+    justify-content: center; /* Centra el grupo de inputs */
+    margin: 10px 0; /* Espaciado alrededor del grupo */
+    
+}
+
+/* Estilo para los inputs individuales */
+.input-group input {
+    width: 280px; /* Ajusta el ancho de los inputs */
+    padding: 10px;
+    border: 2px solid red;
+    border-radius: 10px;
+    background: transparent;
+    color: rgba(255,255,255, 0,7);
+    
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #000;
+    color: #fff;
+}
+footer a {
+    color: #fff;
+    margin: 0 10px;
+}
+.enlace {
+    color: red;
+}
+/* Responsive Styles */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .menu {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .logo {
+        margin: 10px 0;
+        align-self: center;
+    }
+    .socials {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+    }
+    * {
+        box-sizing: border-box;
+    }
+    
+    .tour {
+        height: auto;
+        padding: 20px;
+    }
+
+    .slider {
+        flex-direction: column;
+        padding: 0;
+    }
+    .slider1 {
+        flex-direction: column;
+        padding: 0;
+    }
+    .slider img {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .slider-content {
+        text-align: center;
+    }
+    .slider-controls {
+        padding: 0;
+        padding-top: 10px;
+        
+        
+    }
+    .slider-controls button {
+        background: transparent;
+        border: 2px solid red;
+        color: red;
+        border-radius: 15px;
+        padding: 15px;
+        text-align: center;   
+        position:relative;
+        top: 0px;
+        left: 10px;    
+        
+    }
+    .ecommerce {
+        grid-template-columns: 1fr;
+    }
+
+    .join {
+        flex-direction: column;
+        text-align: center;
+    }
+    .join img {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .join-form {
+        width: 100%;
+    }
+    .join-form input, .join-form select, .join-form button {
+        width: 100%;
+    }
+    .join-form small {
+        text-align: left;
+    }
+
+    footer {
+        font-size: 14px;
+    }
+    /** {
+        outline: 1px solid red;
+    }*/
+    
+}

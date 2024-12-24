@@ -1,6 +1,13 @@
 /* General Styles */
+
+@font-face{
+    font-family: 'helvetrica';
+    src: url(public/Helvetica-Bold.ttf);
+    font-weight: bold;
+    font-style: bold;
+}
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'helvetica';
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -57,7 +64,7 @@ section {
     
 }
 .tour {
-    background-image: url('public/img/1_PORTADA.png');
+    background-image: url('public/img/banner2.png');
     background-size: cover;
     background-position: center;
     color: #fff;
@@ -73,9 +80,16 @@ section {
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
+    margin-top: 380px;
+    margin-right: 900px;
+    
 }
 
 /* Slider Styles */
+
+
+
+/**/
 .slider1 {
     display: flex;
     align-items: center;
@@ -198,7 +212,7 @@ section {
     text-align: center; /* Centra el título */
     padding: 30px;
     background-color: #000;
-    font-family: Arial, sans-serif;
+    font-family: 'helvetica';
     font-weight: bold;
     
 }
@@ -208,7 +222,7 @@ section {
     border-radius: 7px;
     padding: 5px;
     text-align: center;  
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'helvetica';
     font-weight: bold;   
 
 }
@@ -245,7 +259,7 @@ section {
 .item p {
     font-size: 16px;
     color: #ffffff;
-    font-family: arial,
+    font-family: 'helvetica';
 }
 
 /* Join Section Styles */
@@ -313,7 +327,7 @@ section {
     border-radius: 5px;
     cursor: pointer;
     margin-top: 40px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'helvetica';
     font-weight: bold;
 }
 /* Contenedor para los dos campos de input */
@@ -351,6 +365,15 @@ footer a {
     color: red;
 }
 /* Responsive Styles */
+@media (max-width: 768px) {
+    iframe {
+        width: 100%;
+    }
+    .slider-controls {
+        width: 80px;
+    }
+}
+
 @media (max-width: 768px) {
     header {
         flex-direction: column;

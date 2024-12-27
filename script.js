@@ -14,36 +14,29 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // Slider de Spotify
-    const spotifySongs = [
-        "https://open.spotify.com/embed/track/6rqhFgbbKwnb9MLmUQDhG6", // Canción 1
-        "https://open.spotify.com/embed/track/7ouMYWpwJ422jRcDASZB7P", // Canción 2
-        "https://open.spotify.com/embed/track/3AhXZa8sUQht0UEdBJgpGc", // Canción 3
-        "https://open.spotify.com/embed/track/0VjIjW4GlUZAMYd2vXMi3b"  // Canción 4
-    ];
+    // Funcionalidad del slider de Spotify
+const spotifySlider = document.querySelector("#spotify-slider");
+const spotifyTracks = spotifySlider.querySelectorAll("iframe");
+let currentTrackIndex = 0;
 
-    let currentSongIndex = 0;
+function showTrack(index) {
+    spotifyTracks.forEach((track, i) => {
+        track.style.display = i === index ? "block" : "none";
+    });
+}
 
-    const spotifyIframe = document.querySelector(".spotify-iframe");
-    const spotifyPrevButton = document.querySelector(".spotify-prev");
-    const spotifyNextButton = document.querySelector(".spotify-next");
+document.querySelector("#spotify-prev").addEventListener("click", () => {
+    currentTrackIndex = (currentTrackIndex - 1 + spotifyTracks.length) % spotifyTracks.length;
+    showTrack(currentTrackIndex);
+});
 
-    if (spotifyIframe && spotifyPrevButton && spotifyNextButton) {
-        const updateSpotifyIframe = () => {
-            spotifyIframe.src = spotifySongs[currentSongIndex];
-        };
+document.querySelector("#spotify-next").addEventListener("click", () => {
+    currentTrackIndex = (currentTrackIndex + 1) % spotifyTracks.length;
+    showTrack(currentTrackIndex);
+});
 
-        spotifyPrevButton.addEventListener("click", () => {
-            currentSongIndex = (currentSongIndex - 1 + spotifySongs.length) % spotifySongs.length;
-            updateSpotifyIframe();
-        });
+// Mostrar la primera canción al cargar
+showTrack(currentTrackIndex);
 
-        spotifyNextButton.addEventListener("click", () => {
-            currentSongIndex = (currentSongIndex + 1) % spotifySongs.length;
-            updateSpotifyIframe();
-        });
-
-        // Inicializar el iframe con la primera canción
-        updateSpotifyIframe();
-    }
 });
 

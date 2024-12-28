@@ -194,16 +194,15 @@ button:hover {
     right: 10px;
 }
 
+/**/
 
+/**/
 /**/
 .slider1 {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    background-color: #000;
-    padding: 20px;
-    padding-left: 200px;
-    padding-right: 400px;
+    justify-content: space-evenly;
+    background-color: #000;   
     padding-top: 75px;
     padding-bottom: 75px;
     
@@ -211,7 +210,7 @@ button:hover {
 .slider2 {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     background-color: #000;
     padding: 0px;
     padding-top: 75px;

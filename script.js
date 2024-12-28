@@ -17,31 +17,69 @@ scrollTopBtn.onclick = function() {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 };
 
-<script>
-    // Lista de canciones (urls de Spotify)
-    const tracks = [
+document.addEventListener("DOMContentLoaded", function () {
+    // Lista de canciones de Spotify (URLs de Spotify)
+    const spotifyTracks = [
         "https://open.spotify.com/embed/track/62mEKHjai7usrhyijNUxf8?utm_source=generator",
         "https://open.spotify.com/embed/track/20Vc6KmPFJixmDq9ZkJdcZ?utm_source=generator",
-        "https://open.spotify.com/embed/track/6ediV9G8JCWHW8MHmly4Bd?utm_source=generator"
+        "https://open.spotify.com/embed/track/6ediV9G8JCWHW8MHmly4Bd?utm_source=generator",
     ];
 
-    let currentTrackIndex = 0; // Índice de la canción actual
-    const spotifyPlayer = document.getElementById("spotify-player");
+    // Lista de canciones de YouTube (URLs de YouTube)
+    const youtubeTracks = [
+        "https://www.youtube.com/embed/3I5YxtOfm0g",
+        "https://www.youtube.com/embed/VYymPJofH-Q",
+        "https://www.youtube.com/embed/g8H7w4rFHto",
+        "https://www.youtube.com/embed/QINJRlKwOXo",
+    ];
 
-    // Función para cambiar la canción
-    function changeTrack(index) {
-        currentTrackIndex = index;
-        if (currentTrackIndex < 0) currentTrackIndex = tracks.length - 1; // Volver al último
-        if (currentTrackIndex >= tracks.length) currentTrackIndex = 0; // Volver al primero
-        spotifyPlayer.src = tracks[currentTrackIndex];
+    let currentSpotifyIndex = 0; // Índice de la canción actual de Spotify
+    let currentYoutubeIndex = 0; // Índice de la canción actual de YouTube
+
+    const spotifyPlayer = document.getElementById("spotify-player");
+    const youtubePlayer = document.getElementById("youtube-player");
+
+    // Función para cambiar las canciones en Spotify
+    function changeSpotifyTrack(index) {
+        if (index < 0) {
+            currentSpotifyIndex = spotifyTracks.length - 1;
+        } else if (index >= spotifyTracks.length) {
+            currentSpotifyIndex = 0;
+        } else {
+            currentSpotifyIndex = index;
+        }
+        spotifyPlayer.src = spotifyTracks[currentSpotifyIndex];
     }
 
-    // Listeners para los botones
-    document.querySelector(".spotify-prev").addEventListener("click", () => {
-        changeTrack(currentTrackIndex - 1);
+    // Función para cambiar las canciones en YouTube
+    function changeYoutubeTrack(index) {
+        if (index < 0) {
+            currentYoutubeIndex = youtubeTracks.length - 1;
+        } else if (index >= youtubeTracks.length) {
+            currentYoutubeIndex = 0;
+        } else {
+            currentYoutubeIndex = index;
+        }
+        youtubePlayer.src = youtubeTracks[currentYoutubeIndex];
+    }
+
+    // Spotify Controls
+    document.querySelector(".spotify-prev").addEventListener("click", function () {
+        changeSpotifyTrack(currentSpotifyIndex - 1);
     });
 
-    document.querySelector(".spotify-next").addEventListener("click", () => {
-        changeTrack(currentTrackIndex + 1);
+    document.querySelector(".spotify-next").addEventListener("click", function () {
+        changeSpotifyTrack(currentSpotifyIndex + 1);
     });
-</script>
+
+    // YouTube Controls
+    document.querySelector(".youtube-prev").addEventListener("click", function () {
+        changeYoutubeTrack(currentYoutubeIndex - 1);
+    });
+
+    document.querySelector(".youtube-next").addEventListener("click", function () {
+        changeYoutubeTrack(currentYoutubeIndex + 1);
+    });
+});
+
+

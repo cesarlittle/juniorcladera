@@ -92,7 +92,7 @@ section {
 .tour-section {
     text-align: center;
     padding: 20px;
-    background-color: #000;
+    background-color: #0f0f0f;
 }
 
 /* Enlace contenedor de la imagen */
@@ -208,7 +208,7 @@ button:hover {
     padding-bottom: 75px;
     
 }
-.slider {
+.slider2 {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -225,7 +225,7 @@ button:hover {
     border-radius: 10px; /* Opcional, añade bordes redondeados */
     margin: 0 20px; /* Espaciado entre el video y los botones */
 }
-.slider iframe {
+.slider2 iframe {
     width: 800px; /* Ajusta el ancho */
     height: 450px; /* Ajusta la altura */
     max-width: 100%; /* Asegúrate de que el video sea responsive */
@@ -237,10 +237,10 @@ button:hover {
     height: auto;
     border-radius: 7px;
 }
-.slider-content {
+.slider2-content {
     text-align: center;
 }
-.slider-content h1 {
+.slider2-content h1 {
     margin: 0;
     color: #fff;
     text-align: center;
@@ -248,7 +248,7 @@ button:hover {
     font-size: 40px;
     
 }
-.slider-content h4 {
+.slider2-content h4 {
     margin: 10px 0;
     color: #ffffff;
     text-align: center;
@@ -256,7 +256,7 @@ button:hover {
     
     
 }
-.slider button {
+.slider2 button {
     background: transparent;
     border: 2px solid red;
     color: red;
@@ -265,7 +265,7 @@ button:hover {
     text-align: center;
 
 }
-.slider-controls {
+.slider2-controls {
     right: 10px; /* Alinea los controles hacia la derecha */
     display: flex; /* Cambia la disposición a un diseño de línea (flexbox) */
     gap: 20px; /* Añade una separación de 40px entre los botones */
@@ -273,7 +273,7 @@ button:hover {
 
 }
 
-.slider-controls button {
+.slider2-controls button {
     background: transparent;
     border: 2px solid red;
     color: red;

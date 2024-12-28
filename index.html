@@ -25,15 +25,24 @@
         </div>
     </header>    
 
-    <section id="tour" class="tour">
+    <section id="tour" class="tour-section">
+        <!-- Contenedor para la imagen con el enlace -->
+        <a href="https://www.maketicket.com.ve/evento/un-llanero-por-el-mundo" target="_blank" class="tour-link">
+            <div class="tour"></div>
+        </a>
+    
+        <!-- Título del tour -->
         <h1></h1>
-        <button>Descubre el Tour</button>
+    
+        <!-- Botón del tour -->
+        <button onclick="window.open('https://www.maketicket.com.ve/evento/un-llanero-por-el-mundo', '_blank')">Descubre el Tour</button>
     </section>
     
     <section id="music" style="background-color: black; padding: 20px; color: white; text-align: center;">
         <h1>Música de Junior Caldera</h1>
         <div class="slider1">
             <iframe 
+                id="spotify-player" 
                 class="spotify-iframe" 
                 src="https://open.spotify.com/embed/track/62mEKHjai7usrhyijNUxf8?utm_source=generator" 
                 frameborder="0" 
@@ -46,7 +55,8 @@
                 <button class="spotify-next">▶</button>
             </div>
         </div>
-    </section>    
+    </section>
+    
     
     <section id="videos" style="background-color: black;" >
         <div class="slider">

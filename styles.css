@@ -87,7 +87,52 @@ section {
     text-align: center;
     
 }
+/**/
+/* Estilo de la sección general */
+.tour-section {
+    text-align: center;
+    padding: 20px;
+    background-color: #000;
+}
+
+/* Enlace contenedor de la imagen */
+.tour-link {
+    display: block;
+    margin: 0 auto;
+    text-decoration: none; /* Sin subrayado */
+}
+
+/* Imagen de fondo para la sección */
 .tour {
+    background-image: url('public/img/banner2.png');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    max-width: 1920px; /* Ajusta el ancho máximo */
+    height: 600px; /* Ajusta la altura */
+    cursor: pointer; /* Indica que es clicable */
+    border-radius: 8px; /* Opcional: redondear bordes */
+    margin-bottom: 20px; /* Espaciado con el contenido */
+}
+
+/* Botón */
+button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/**/
+/*.tour {
     background-image: url('public/img/banner2.png');
     background-size: cover;
     background-position: center;
@@ -98,7 +143,11 @@ section {
     align-items: center;
     flex-direction: column;
 }
-.tour button {
+.tour-container {
+    display: block;
+    text-decoration: none; /* Evita subrayado en enlaces */
+  }
+/*.tour button {
     background-color: red;
     color: white;
     border: none;
@@ -108,7 +157,7 @@ section {
     margin-right: 900px;
     
 }
-
+ 
 /* Slider Styles */
 
 .slider {

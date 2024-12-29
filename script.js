@@ -139,3 +139,45 @@ form.addEventListener("submit", (e) => {
     alert("¡Gracias por unirte! Hemos recibido tus datos.");
 });
 
+// Seleccionar el formulario y el popup
+const customForm = document.getElementById("custom-form");
+const popup = document.getElementById("popup");
+
+// Función para cerrar el popup
+function closePopup() {
+    popup.style.display = "none";
+}
+
+// Manejar el envío del formulario
+customForm.addEventListener("submit", async (e) => {
+    e.preventDefault(); // Evita el envío predeterminado del formulario
+
+    // Recopilar los datos del formulario
+    const formData = new FormData(customForm);
+
+    // Convertir los datos a formato URLSearchParams para Google Forms
+    const params = new URLSearchParams();
+    for (const pair of formData) {
+        params.append(pair[0], pair[1]);
+    }
+
+    try {
+        // Enviar los datos al endpoint de Google Forms
+        const response = await fetch("https://docs.google.com/forms/d/e/1FAIpQLSeqFjHd3gS1tneUODTlrMGTKPGjEdgpmUfIvRMvkVLCS4ff0Q/formResponse", {
+            method: "POST",
+            body: params,
+        });
+
+        if (response.ok || response.status === 200 || response.status === 0) {
+            // Mostrar el popup de éxito
+            popup.style.display = "block";
+            customForm.reset(); // Limpiar el formulario
+        } else {
+            alert("Hubo un error al enviar el formulario. Por favor, intenta de nuevo.");
+        }
+    } catch (error) {
+        console.error("Error al enviar el formulario:", error);
+        alert("Hubo un error al enviar el formulario. Por favor, intenta de nuevo.");
+    }
+});
+

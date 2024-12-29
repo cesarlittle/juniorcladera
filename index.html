@@ -105,10 +105,9 @@
         <div class="join-form">
             <h1>ÚNETE</h1>
             <h6>Recibe las últimas noticias y lanzamientos de Junior Caldera</h6>
-            
-            <!-- Formulario con el enlace de acción de Google Forms -->
-            <form action="https://docs.google.com/forms/d/e/1FAIpQLSeqFjHd3gS1tneUODTlrMGTKPGjEdgpmUfIvRMvkVLCS4ff0Q/formResponse" method="post" target="_self">
-
+    
+            <!-- Formulario con id para manejar envío con JavaScript -->
+            <form id="custom-form">
                 <!-- Contenedor para email y país/ciudad -->
                 <div class="input-group">
                     <input type="email" name="entry.1249585773" placeholder="EMAIL" required>
@@ -129,7 +128,6 @@
         <img src="public/img/juniorCaldera01.jpg" alt="Junior Caldera">
     </section>
     
-    
     <!-- Popup que aparecerá después de enviar el formulario -->
     <div id="popup" style="display:none;">
         <div class="popup-content">
@@ -137,8 +135,7 @@
             <p>Hemos recibido tus datos. ¡Te mantendremos informado!</p>
             <button onclick="closePopup()">Cerrar</button>
         </div>
-    </div>            
-   
+    </div>       
 
     <footer>
         <p>ZINGALES RECORDS - <a href="#">TÉRMINOS Y CONDICIONES</a> - <a href="#">POLÍTICA DE PRIVACIDAD</a> - BOOKING</p>

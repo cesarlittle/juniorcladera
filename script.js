@@ -180,11 +180,3 @@ document.querySelector('.hamburger-menu').addEventListener('click', function() {
     const navLinks = document.querySelector('.nav-links');
     navLinks.classList.toggle('show'); // Alterna la visibilidad del menú
 });
-// Seleccionar el botón y el menú móvil
-const menuToggle = document.getElementById('menu-toggle');
-const mobileMenu = document.getElementById('mobile-menu');
-
-// Añadir evento de clic para mostrar/ocultar el menú
-menuToggle.addEventListener('click', () => {
-    mobileMenu.classList.toggle('active');
-});

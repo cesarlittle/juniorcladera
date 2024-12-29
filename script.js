@@ -18,7 +18,6 @@ scrollTopBtn.onclick = function() {
 };
 
 document.addEventListener("DOMContentLoaded", function () {
-    console.log('entro slider')
     // Lista de canciones de Spotify (URLs de Spotify)
     const spotifyTracks = [
         "https://open.spotify.com/embed/track/62mEKHjai7usrhyijNUxf8?utm_source=generator",

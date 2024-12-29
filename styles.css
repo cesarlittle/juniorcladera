@@ -579,6 +579,9 @@ body {
       margin: 0;
       padding: 0;
     }
+    #scrollTopBtn {
+        width: max-content;
+    }
   }
   
 

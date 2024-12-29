@@ -561,7 +561,7 @@ footer a {
     .menu {
         flex-wrap: wrap;
         gap: 10px;
-        padding-left: 30px;
+        padding-left: 25px;
         flex-wrap: wrap;
         justify-content: space-between;
         width: 100%;

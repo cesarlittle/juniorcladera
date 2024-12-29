@@ -146,7 +146,7 @@ button:hover {
 .tour-container {
     display: block;
     text-decoration: none; /* Evita subrayado en enlaces */
-  }
+  
 /*.tour button {
     background-color: red;
     color: white;

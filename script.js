@@ -82,4 +82,40 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+// Inicializa EmailJS con tu USER_ID
+emailjs.init("olq3-rovvp-UAh_tC");
+
+// Selecciona el formulario y el botón
+const joinForm = document.querySelector(".join-form");
+const subscribeButton = joinForm.querySelector("button");
+
+subscribeButton.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    // Obtén los valores de los campos
+    const email = joinForm.querySelector('input[type="email"]').value;
+    const location = joinForm.querySelector('input[type="text"]').value;
+    const consent = joinForm.querySelector('.checkbox').checked ? "Sí" : "No";
+
+    // Valida el correo electrónico (opcional)
+    if (!email) {
+        alert("Por favor, introduce un correo electrónico válido.");
+        return;
+    }
+
+    // Envía el correo usando EmailJS
+    emailjs.send("service_cend2y6", "template_uneuaza", {
+        email: email,
+        location: location,
+        consent: consent,
+    })
+    .then((response) => {
+        console.log("Correo enviado:", response.status, response.text);
+        alert("Gracias por registrarte. ¡Hemos recibido tus datos!");
+    })
+    .catch((error) => {
+        console.error("Error al enviar el correo:", error);
+        alert("Hubo un problema al enviar tus datos. Intenta nuevamente.");
+    });
+});
 

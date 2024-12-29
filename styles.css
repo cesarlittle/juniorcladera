@@ -602,6 +602,7 @@ body {
         flex-wrap: wrap;
         justify-content: space-between;
         width: 40px;
+        height: auto;
 
        
     }

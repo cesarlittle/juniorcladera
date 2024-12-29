@@ -518,7 +518,7 @@ footer a {
     }
 }
 @media (max-width: 768px) { /* Puedes ajustar este valor dependiendo del tamaño en que quieras que se aplique */
-    .main-image { /* Clase de tu imagen principal */
+    .tour { /* Clase de tu imagen principal */
         background-image: url('public/img/imagenbannermobile.png');
         background-size: cover;
     }
@@ -568,7 +568,7 @@ footer a {
     }
     
     .tour {
-        height: auto;
+        
         padding: 20px;
     }
 

@@ -517,6 +517,33 @@ footer a {
         width: 80px;
     }
 }
+@media (max-width: 768px) { /* Puedes ajustar este valor dependiendo del tamaño en que quieras que se aplique */
+    .main-image { /* Clase de tu imagen principal */
+        background-image: url('public/img/imagenbannermobile.png');
+        background-size: cover;
+    }
+}
+@media (max-width: 768px) {
+    .spotify-controls, .youtube-controls {
+        display: flex;
+        justify-content: center; /* Centra los botones */
+        align-items: center; /* Centra verticalmente si es necesario */
+    }
+}
+@media (max-width: 768px) {
+    .hamburger-menu {
+        display: block; /* Asegúrate de que el menú hamburguesa sea visible */
+    }
+
+    .nav-links {
+        display: none; /* Esconde el menú de navegación inicialmente */
+    }
+
+    .nav-links.show {
+        display: block; /* Muestra el menú cuando la clase 'show' es agregada */
+    }
+}
+
 
 @media (max-width: 768px) {
     header {

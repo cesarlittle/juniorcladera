@@ -176,3 +176,7 @@ form.addEventListener("submit", (e) => {
             console.error("Error al enviar los datos:", error);
         });
 });
+document.querySelector('.hamburger-menu').addEventListener('click', function() {
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.classList.toggle('show'); // Alterna la visibilidad del menú
+});

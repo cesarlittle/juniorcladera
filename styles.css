@@ -262,6 +262,7 @@ button:hover {
     border-radius: 15px;
     padding: 15px;
     text-align: center;
+    margin-top: 180px;
 
 }
 .slider2-controls {
@@ -514,7 +515,10 @@ footer a {
         width: 100%;
     }
     .slider-controls {
-        width: 80px;
+       width: ;
+    }
+    .slider-controls2 {
+        width: ;
     }
 }
 @media (max-width: 768px) { /* Puedes ajustar este valor dependiendo del tamaño en que quieras que se aplique */
@@ -557,7 +561,7 @@ footer a {
     .menu {
         flex-wrap: wrap;
         gap: 10px;
-        padding-left: 25px;
+        padding-left: 45px;
     }
     .logo {
         margin: 10px 0;
@@ -568,6 +572,7 @@ footer a {
         flex-wrap: wrap;
         justify-content: space-between;
         width: 100%;
+        padding-left: 40px;
     }
     * {
         box-sizing: border-box;
@@ -595,6 +600,16 @@ footer a {
         
         
     }
+    .slider-controls2 {
+        padding: 0;
+        padding-top: 10px;
+        padding-right: 20px;
+        width: 100%;
+        display: flex;
+        
+        
+        
+    }
     .slider-controls button {
         background: transparent;
         border: 2px solid red;
@@ -605,6 +620,18 @@ footer a {
         position:relative;
         top: 0px;
         left: 10px;    
+        
+    }
+    .slider-controls2 button {
+        background: transparent;
+        border: 2px solid red;
+        color: red;
+        border-radius: 15px;
+        padding: 15px;
+        text-align: center;   
+        position:relative;
+        top: 170px;
+        right: 120px;   
         
     }
     .ecommerce {

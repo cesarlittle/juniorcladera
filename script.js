@@ -132,15 +132,15 @@ function showPopup() {
 function closePopup() {
     document.getElementById("popup").style.display = "none";
 }*/
-const form = document.querySelector("form");
+/*const form = document.querySelector("form");
 form.addEventListener("submit", (e) => {
     e.preventDefault(); // Evita el comportamiento por defecto
     form.submit(); // Envía los datos
     alert("¡Gracias por unirte! Hemos recibido tus datos.");
-});
+});*/
 
 // Seleccionar el formulario y el popup
-const customForm = document.getElementById("custom-form");
+const form = document.getElementById("custom-form");
 const popup = document.getElementById("popup");
 
 // Función para cerrar el popup
@@ -149,35 +149,30 @@ function closePopup() {
 }
 
 // Manejar el envío del formulario
-customForm.addEventListener("submit", async (e) => {
-    e.preventDefault(); // Evita el envío predeterminado del formulario
+form.addEventListener("submit", (e) => {
+    e.preventDefault(); // Evita la recarga de la página
 
-    // Recopilar los datos del formulario
-    const formData = new FormData(customForm);
+    // Crear un objeto FormData con los datos del formulario
+    const formData = new FormData(form);
 
-    // Convertir los datos a formato URLSearchParams para Google Forms
+    // Convertir FormData a URLSearchParams para enviar al servidor
     const params = new URLSearchParams();
-    for (const pair of formData) {
-        params.append(pair[0], pair[1]);
-    }
+    formData.forEach((value, key) => {
+        params.append(key, value);
+    });
 
-    try {
-        // Enviar los datos al endpoint de Google Forms
-        const response = await fetch("https://docs.google.com/forms/d/e/1FAIpQLSeqFjHd3gS1tneUODTlrMGTKPGjEdgpmUfIvRMvkVLCS4ff0Q/formResponse", {
-            method: "POST",
-            body: params,
-        });
-
-        if (response.ok || response.status === 200 || response.status === 0) {
-            // Mostrar el popup de éxito
+    // Enviar los datos usando fetch al endpoint de Google Forms
+    fetch(form.action, {
+        method: "POST",
+        body: params,
+        mode: "no-cors", // Necesario para evitar errores CORS con Google Forms
+    })
+        .then(() => {
+            // Mostrar el popup de confirmación
             popup.style.display = "block";
-            customForm.reset(); // Limpiar el formulario
-        } else {
-            alert("Hubo un error al enviar el formulario. Por favor, intenta de nuevo.");
-        }
-    } catch (error) {
-        console.error("Error al enviar el formulario:", error);
-        alert("Hubo un error al enviar el formulario. Por favor, intenta de nuevo.");
-    }
+            form.reset(); // Limpiar los campos del formulario
+        })
+        .catch((error) => {
+            console.error("Error al enviar los datos:", error);
+        });
 });
-

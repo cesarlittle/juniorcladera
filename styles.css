@@ -601,6 +601,8 @@ body {
         align-self: center;        
         flex-wrap: wrap;
         justify-content: space-between;
+        width: 40px;
+
        
     }
     .socials {

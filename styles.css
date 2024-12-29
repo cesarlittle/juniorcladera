@@ -11,8 +11,18 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    overflow-x: hidden
+    overflow-x: hidden;   
+    margin: 0; /* Elimina los márgenes predeterminados */
+    padding: 0; /* Elimina los paddings predeterminados */
+    background-image: url('public/img/1920x1080.png'); /* Cambia por la ruta de tu imagen */
+    background-size: cover; /* La imagen cubre todo el fondo */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-attachment: fixed; /* Fija el fondo */
+    background-position: center; /* Centra la imagen */
+    
+    
 }
+
 a {
     text-decoration: none;
     color: inherit;
@@ -42,7 +52,7 @@ header {
 .menu a {
     color: #fff;
     font-weight: bold;
-}w 
+}
 .logo {
     width: 40px;
     height: auto;
@@ -94,7 +104,7 @@ section {
 .tour-section {
     text-align: center;
     padding: 0px;
-    background-color: #000000;
+    /* background-color: #000000; */
 }
 
 /* Enlace contenedor de la imagen */
@@ -106,7 +116,7 @@ section {
 
 /* Imagen de fondo para la sección */
 .tour {
-    background-image: url('public/img/banner\ new.png');
+    background-image: url('public/img/1920x1080grupo.png');
     background-size: cover;
     background-position: center;
     width: 100%;
@@ -115,8 +125,16 @@ section {
     cursor: pointer; /* Indica que es clicable */
     border-radius: 8px; /* Opcional: redondear bordes */
     margin-bottom: 20px; /* Espaciado con el contenido */
+    color: white;
 }
+#music {
+    background-image: url('public/img/notas\ musicales.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    
 
+}
 /* Botón */
 button {
     background-color: red;
@@ -134,7 +152,7 @@ button:hover {
 }
 
 /**/
-/*.tour {
+/* .tour {
     background-image: url('public/img/banner2.png');
     background-size: cover;
     background-position: center;
@@ -204,7 +222,7 @@ button:hover {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    background-color: #000;   
+    /* background-color: #000;    */
     padding-top: 75px;
     padding-bottom: 75px;
     

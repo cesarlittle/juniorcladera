@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Junior Caldera</title>
     <link rel="stylesheet" href="styles.css">
+    <!--<script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>-->
+
 </head>
 <body>
 
@@ -104,22 +106,29 @@
             <h1>ÚNETE</h1>
             <h6>Recibe las últimas noticias y lanzamientos de Junior Caldera</h6>
             
-            <!-- Contenedor para email y país/ciudad -->
-            <div class="input-group">
-                <input type="email" placeholder="EMAIL" required>
-                <input type="text" placeholder="PAÍS/CIUDAD">
-            </div>
-            
-            <small>*CAMPOS OBLIGATORIOS</small>
-            <label class="checkbox-container">
-                <input type="checkbox" class="checkbox">
-                Acepto recibir correos electrónicos de Junior Caldera
-            </label>
-            <small>Los correos electrónicos serán enviados por o en nombre de Zingalez Records. Puede retirar su consentimiento en cualquier momento.</small>
-            <button id="submitBtn" type="button">SUSCRÍBETE</button>  <!-- Asegúrate de que tenga id="submitBtn" -->
+            <!-- Formulario con el enlace de acción de Google Forms -->
+            <form action="https://docs.google.com/forms/d/e/1FAIpQLSeqFjHd3gS1tneUODTlrMGTKPGjEdgpmUfIvRMvkVLCS4ff0Q/formResponse" method="post" target="_self">
+
+                <!-- Contenedor para email y país/ciudad -->
+                <div class="input-group">
+                    <input type="email" name="entry.1249585773" placeholder="EMAIL" required>
+                    <input type="text" name="entry.606125255" placeholder="PAÍS/CIUDAD">
+                </div>
+                
+                <small style="color: white;">*CAMPOS OBLIGATORIOS</small>
+                <label class="checkbox-container">
+                    <input type="checkbox" name="entry.381108030" class="checkbox">
+                    Acepto recibir correos electrónicos de Junior Caldera
+                </label>
+                <small style="color: white;">Los correos electrónicos serán enviados por o en nombre de Zingalez Records. Puede retirar su consentimiento en cualquier momento.</small>
+                
+                <!-- Botón de envío -->
+                <button type="submit">SUSCRÍBETE</button>
+            </form>
         </div>
         <img src="public/img/juniorCaldera01.jpg" alt="Junior Caldera">
     </section>
+    
     
     <!-- Popup que aparecerá después de enviar el formulario -->
     <div id="popup" style="display:none;">
@@ -128,9 +137,8 @@
             <p>Hemos recibido tus datos. ¡Te mantendremos informado!</p>
             <button onclick="closePopup()">Cerrar</button>
         </div>
-    </div>       
-        
-    </section>    
+    </div>            
+   
 
     <footer>
         <p>ZINGALES RECORDS - <a href="#">TÉRMINOS Y CONDICIONES</a> - <a href="#">POLÍTICA DE PRIVACIDAD</a> - BOOKING</p>

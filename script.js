@@ -82,7 +82,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-// Inicializa EmailJS con tu USER_ID
+/*// Inicializa EmailJS con tu USER_ID
 emailjs.init("olq3-rovvp-UAh_tC");  // Asegúrate de que el USER_ID esté bien configurado
 
 // Selecciona el formulario y el botón
@@ -131,5 +131,11 @@ function showPopup() {
 // Función para cerrar el popup
 function closePopup() {
     document.getElementById("popup").style.display = "none";
-}
+}*/
+const form = document.querySelector("form");
+form.addEventListener("submit", (e) => {
+    e.preventDefault(); // Evita el comportamiento por defecto
+    form.submit(); // Envía los datos
+    alert("¡Gracias por unirte! Hemos recibido tus datos.");
+});
 

@@ -82,63 +82,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-/*// Inicializa EmailJS con tu USER_ID
-emailjs.init("olq3-rovvp-UAh_tC");  // Asegúrate de que el USER_ID esté bien configurado
-
-// Selecciona el formulario y el botón
-const joinForm = document.querySelector(".join-form");
-const subscribeButton = document.querySelector("#submitBtn");
-
-subscribeButton.addEventListener("click", function (e) {
-    e.preventDefault(); // Evita el comportamiento predeterminado (recarga de la página)
-
-    // Obtén los valores de los campos
-    const email = joinForm.querySelector('input[type="email"]').value;
-    const location = joinForm.querySelector('input[type="text"]').value;
-    const consent = joinForm.querySelector('.checkbox').checked ? "Sí" : "No";
-
-    // Verificar los valores (para asegurarse de que los datos están llegando)
-    console.log("Email:", email);
-    console.log("Location:", location);
-    console.log("Consent:", consent);
-
-    // Validación simple
-    if (!email || !location) {
-        alert("Por favor, completa todos los campos.");
-        return;
-    }
-
-    // Enviar los datos a través de EmailJS
-    emailjs.send("service_cend2y6", "template_uneuaza", {
-        email: email,
-        location: location,
-        consent: consent
-    }).then((response) => {
-        console.log("Correo enviado:", response.status, response.text);
-        // Mostrar el popup al enviar el formulario con éxito
-        showPopup();
-    }).catch((error) => {
-        console.error("Error al enviar el correo:", error);
-        alert("Hubo un problema al enviar tus datos. Intenta nuevamente.");
-    });
-});
-
-// Función para mostrar el popup
-function showPopup() {
-    document.getElementById("popup").style.display = "flex";
-}
-
-// Función para cerrar el popup
-function closePopup() {
-    document.getElementById("popup").style.display = "none";
-}*/
-/*const form = document.querySelector("form");
-form.addEventListener("submit", (e) => {
-    e.preventDefault(); // Evita el comportamiento por defecto
-    form.submit(); // Envía los datos
-    alert("¡Gracias por unirte! Hemos recibido tus datos.");
-});*/
-
 // Seleccionar el formulario y el popup
 const form = document.getElementById("custom-form");
 const popup = document.getElementById("popup");

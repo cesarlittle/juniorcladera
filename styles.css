@@ -561,7 +561,7 @@ footer a {
     .menu {
         flex-wrap: wrap;
         gap: 10px;
-        padding-left: 45px;
+        padding-left: 40px;
         flex-wrap: wrap;
         justify-content: space-between;
         width: 100%;
@@ -577,7 +577,7 @@ footer a {
         flex-wrap: wrap;
         justify-content: space-between;
         width: 100%;
-        padding-left: 40px;
+        padding-left: 55px;
         
     }
     * {
@@ -637,7 +637,7 @@ footer a {
         text-align: center;   
         position:relative;
         top: 170px;
-        right: 220px;   
+        right: 200px;   
         
     }
     .ecommerce {

@@ -83,47 +83,53 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // Inicializa EmailJS con tu USER_ID
-emailjs.init("olq3-rovvp-UAh_tC"); // Asegúrate de que este sea tu USER_ID
+emailjs.init("olq3-rovvp-UAh_tC");  // Asegúrate de que el USER_ID esté bien configurado
 
 // Selecciona el formulario y el botón
-const subscribeButton = document.querySelector("#subscribeButton");
+const joinForm = document.querySelector(".join-form");
+const subscribeButton = document.querySelector("#submitBtn");
 
-subscribeButton.addEventListener("click", (e) => {
-    e.preventDefault(); // Evita la recarga de la página
+subscribeButton.addEventListener("click", function (e) {
+    e.preventDefault(); // Evita el comportamiento predeterminado (recarga de la página)
 
     // Obtén los valores de los campos
-    const email = document.querySelector('#email').value;
-    const location = document.querySelector('#location').value;
-    const consent = document.querySelector('.checkbox').checked ? "Sí" : "No";
+    const email = joinForm.querySelector('input[type="email"]').value;
+    const location = joinForm.querySelector('input[type="text"]').value;
+    const consent = joinForm.querySelector('.checkbox').checked ? "Sí" : "No";
 
-    // Validación simple de email
-    if (!email) {
-        alert("Por favor, introduce un correo electrónico válido.");
+    // Verificar los valores (para asegurarse de que los datos están llegando)
+    console.log("Email:", email);
+    console.log("Location:", location);
+    console.log("Consent:", consent);
+
+    // Validación simple
+    if (!email || !location) {
+        alert("Por favor, completa todos los campos.");
         return;
     }
 
-    // Envía los datos utilizando EmailJS
+    // Enviar los datos a través de EmailJS
     emailjs.send("service_cend2y6", "template_uneuaza", {
         email: email,
         location: location,
-        consent: consent,
-    })
-    .then((response) => {
+        consent: consent
+    }).then((response) => {
         console.log("Correo enviado:", response.status, response.text);
-
-        // Mostrar popup de éxito
-        const popup = document.getElementById("popup");
-        popup.classList.remove("hidden");
-
-        // Escuchar el clic para cerrar el popup
-        const closePopup = document.getElementById("closePopup");
-        closePopup.addEventListener("click", () => {
-            popup.classList.add("hidden");
-        });
-    })
-    .catch((error) => {
+        // Mostrar el popup al enviar el formulario con éxito
+        showPopup();
+    }).catch((error) => {
         console.error("Error al enviar el correo:", error);
         alert("Hubo un problema al enviar tus datos. Intenta nuevamente.");
     });
 });
-    
+
+// Función para mostrar el popup
+function showPopup() {
+    document.getElementById("popup").style.display = "flex";
+}
+
+// Función para cerrar el popup
+function closePopup() {
+    document.getElementById("popup").style.display = "none";
+}
+

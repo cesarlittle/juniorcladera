@@ -586,8 +586,8 @@ img {
       padding: 0;
     }
     #scrollTopBtn {
-        width: 100%;
-        display: none;
+        max-width: max-content;
+        overflow: hidden;
     }
   }
   

@@ -44,7 +44,7 @@ header {
     font-weight: bold;
 }w 
 .logo {
-    width: 70px;
+    width: 40px;
     height: auto;
     align-items: center;
 }
@@ -520,12 +520,7 @@ body {
 }
 * {
     box-sizing: border-box;
-}
-img {
-    max-width: 100%;
-    height: auto;
-  }
-     
+}    
   
 /* Responsive Styles */
 @media (max-width: 768px) {

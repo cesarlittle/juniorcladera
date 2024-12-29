@@ -85,17 +85,16 @@ document.addEventListener("DOMContentLoaded", function () {
 // Inicializa EmailJS con tu USER_ID
 emailjs.init("olq3-rovvp-UAh_tC");
 
-// Selecciona el formulario y el botón
-const joinForm = document.querySelector(".join-form");
-const subscribeButton = joinForm.querySelector("button");
+// Selecciona el formulario
+const joinForm = document.querySelector("#subscribeForm");
 
-subscribeButton.addEventListener("click", (e) => {
-    e.preventDefault();
+joinForm.addEventListener("submit", (e) => {
+    e.preventDefault(); // Evita el comportamiento por defecto del formulario
 
     // Obtén los valores de los campos
-    const email = joinForm.querySelector('input[type="email"]').value;
-    const location = joinForm.querySelector('input[type="text"]').value;
-    const consent = joinForm.querySelector('.checkbox').checked ? "Sí" : "No";
+    const email = joinForm.querySelector('input[name="user_email"]').value;
+    const location = joinForm.querySelector('input[name="user_location"]').value;
+    const consent = joinForm.querySelector('input[name="user_consent"]').checked ? "Sí" : "No";
 
     // Valida el correo electrónico (opcional)
     if (!email) {
@@ -118,4 +117,3 @@ subscribeButton.addEventListener("click", (e) => {
         alert("Hubo un problema al enviar tus datos. Intenta nuevamente.");
     });
 });
-

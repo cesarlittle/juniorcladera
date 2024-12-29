@@ -105,21 +105,24 @@
             <h6>Recibe las últimas noticias y lanzamientos de Junior Caldera</h6>
             
             <!-- Contenedor para email y país/ciudad -->
-            <div class="input-group">
-                <input type="email" placeholder="EMAIL" required>
-                <input type="text" placeholder="PAÍS/CIUDAD">
-            </div>
-            
-            <small>*CAMPOS OBLIGATORIOS</small>
-            <label class="checkbox-container">
-                <input type="checkbox" class="checkbox">
-                Acepto recibir correos electrónicos de Junior Caldera
-            </label>
-            <small>Los correoes electronicos seran enviados por o en nombre de zingalez records. Puede retirar su concentimiento en cualquier momento.</small>
-            <button>SUSCRÍBETE</button>
+            <form id="subscribeForm">
+                <div class="input-group">
+                    <input type="email" name="user_email" placeholder="EMAIL" required>
+                    <input type="text" name="user_location" placeholder="PAÍS/CIUDAD">
+                </div>
+                
+                <small>*CAMPOS OBLIGATORIOS</small>
+                <label class="checkbox-container">
+                    <input type="checkbox" class="checkbox" name="user_consent" required>
+                    Acepto recibir correos electrónicos de Junior Caldera
+                </label>
+                <small>Los correos electrónicos serán enviados por o en nombre de Zingalez Records. Puede retirar su consentimiento en cualquier momento.</small>
+                <button type="submit">SUSCRÍBETE</button>
+            </form>
         </div>
         <img src="public/img/juniorCaldera01.jpg" alt="Junior Caldera">
-    </section>      
+    </section>
+    
 
     <footer>
         <p>ZINGALES RECORDS - <a href="#">TÉRMINOS Y CONDICIONES</a> - <a href="#">POLÍTICA DE PRIVACIDAD</a> - BOOKING</p>

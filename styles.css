@@ -482,7 +482,7 @@ button:hover {
 
 .popup-content button {
     padding: 10px 20px;
-    background-color: #4caf50;
+    background-color: #c81111;
     color: white;
     border: none;
     border-radius: 5px;
@@ -490,7 +490,7 @@ button:hover {
 }
 
 .popup-content button:hover {
-    background-color: #45a049;
+    background-color: #ff0000;
 }
 
 

@@ -11,21 +11,48 @@
 <body>
 
     <header>
+        <!-- Menú de navegación -->
         <nav class="menu">
             <a href="#tour">TOUR</a>
             <a href="#music">MÚSICA</a>
             <a href="#video">VIDEO</a>
             <!--<a href="#merch">MERCH</a>--> 
         </nav>
+    
+        <!-- Logo -->
         <img src="public/img/JUNIOR-CALDERA.png" alt="Junior Caldera Logo" class="logo" height="70px">
+    
+        <!-- Redes sociales y botón de suscripción -->
         <div class="socials">
-            <a href="https://open.spotify.com/intl-es/artist/0rwGV1HhNWK2Ta4rjmlmtp?si=T7kQdtuQQb2YXlm7YFGMHg" target="_blank"><img src="public/img/spotify.png" alt="Spotify"></a>
-            <a href="https://www.youtube.com/@juniorcalderatm" target="_blank"><img src="public/img/youtube.png" alt="YouTube"></a>
-            <a href="https://instagram.com/juniorcalderatm" target="_blank"><img src="public/img/instagram.png" alt="Instagram"></a>
-            <a href="https://facebook.com/JuniorCalderaVE" target="_blank"><img src="public/img/facebook.png" alt="Facebook"></a>
+            <a href="https://open.spotify.com/intl-es/artist/0rwGV1HhNWK2Ta4rjmlmtp?si=T7kQdtuQQb2YXlm7YFGMHg" target="_blank">
+                <img src="public/img/spotify.png" alt="Spotify">
+            </a>
+            <a href="https://www.youtube.com/@juniorcalderatm" target="_blank">
+                <img src="public/img/youtube.png" alt="YouTube">
+            </a>
+            <a href="https://instagram.com/juniorcalderatm" target="_blank">
+                <img src="public/img/instagram.png" alt="Instagram">
+            </a>
+            <a href="https://facebook.com/JuniorCalderaVE" target="_blank">
+                <img src="public/img/facebook.png" alt="Facebook">
+            </a>
             <a href="#join">SUSCRIBE</a>
         </div>
-    </header>    
+    
+        <!-- Botón de menú hamburguesa (solo visible en móvil) -->
+        <button id="menu-toggle" aria-label="Abrir menú">
+            ☰
+        </button>
+    </header>
+    
+    <!-- Menú móvil desplegable -->
+    <div id="mobile-menu" class="hidden">
+        <a href="#tour">TOUR</a>
+        <a href="#music">MÚSICA</a>
+        <a href="#video">VIDEO</a>
+        <a href="#join">SUSCRIBE</a>
+    </div>
+    
 
     <section id="tour" class="tour-section">
         <!-- Contenedor para la imagen con el enlace -->

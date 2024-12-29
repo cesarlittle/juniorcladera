@@ -557,10 +557,12 @@ footer a {
     .menu {
         flex-wrap: wrap;
         gap: 10px;
+        padding-left: 25px;
     }
     .logo {
         margin: 10px 0;
         align-self: center;
+        margin-right: 128px;
     }
     .socials {
         flex-wrap: wrap;

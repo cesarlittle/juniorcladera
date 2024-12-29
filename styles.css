@@ -519,8 +519,9 @@ footer a {
 }
 @media (max-width: 768px) { /* Puedes ajustar este valor dependiendo del tamaño en que quieras que se aplique */
     .tour { /* Clase de tu imagen principal */
-        background-image: url('public/img/imagenbannermobile.png');
+        background-image: url('public/img/POSTER_VENEZUELA.png');
         background-size: cover;
+        padding: 20px;
     }
 }
 @media (max-width: 768px) {
@@ -565,12 +566,8 @@ footer a {
     }
     * {
         box-sizing: border-box;
-    }
-    
-    .tour {
-        
-        padding: 20px;
-    }
+    }  
+ 
 
     .slider {
         flex-direction: column;

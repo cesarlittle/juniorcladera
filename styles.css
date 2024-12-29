@@ -56,7 +56,7 @@ html {
 #scrollTopBtn {
     position: fixed;
     bottom: 20px;  /* A 20px desde la parte inferior */
-    right: 20px;   /* A 20px desde la parte derecha */
+    right: 40px;   /* A 20px desde la parte derecha */
     background-color: #333;  /* Fondo oscuro */
     color: white;   /* Color blanco para el texto */
     border: none;   /* Sin borde */
@@ -213,8 +213,7 @@ button:hover {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    background-color: #000;
-    padding: 0px;
+    background-color: #000;   
     padding-top: 75px;
     padding-bottom: 75px;
     
@@ -536,9 +535,6 @@ img {
     .slider-controls {
        width: 100%;
     }
-    .slider-controls2 {
-        width: 100%;
-    }
 }
 @media (max-width: 768px) { /* Puedes ajustar este valor dependiendo del tamaño en que quieras que se aplique */
     .tour { /* Clase de tu imagen principal */
@@ -585,10 +581,10 @@ img {
       margin: 0;
       padding: 0;
     }
-    #scrollTopBtn {
+    /* #scrollTopBtn {
         width: 100%;
-        
-    }
+        display: none;
+    } */
   }
   
 
@@ -645,16 +641,7 @@ img {
         
         
     }
-    .slider-controls2 {
-        padding: 0;
-        padding-top: 10px;
-        padding-right: 20px;
-        width: 100%;
-        display: flex;
-        
-        
-        
-    }
+
     .slider-controls button {
         background: transparent;
         border: 2px solid red;
@@ -667,18 +654,7 @@ img {
         left: 10px;    
         
     }
-    .slider-controls2 button {
-        background: transparent;
-        border: 2px solid red;
-        color: red;
-        border-radius: 15px;
-        padding: 15px;
-        text-align: center;   
-        position:relative;
-        top: 170px;
-        right: 205px;   
-        
-    }
+
     .ecommerce {
         grid-template-columns: 1fr;
     }

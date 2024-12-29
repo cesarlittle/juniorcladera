@@ -667,6 +667,20 @@ th, td {
         margin-top: 10px;
     }
 }
+/* Bandera */
+.bandera {
+    max-width: 100%; /* La imagen nunca será más ancha que su contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    display: block; /* Asegura que respete el flujo del documento */
+    margin: 0 auto; /* Centra la imagen horizontalmente */
+}
+
+/* Ajustes específicos para dispositivos móviles */
+@media (max-width: 768px) {
+    .bandera {
+        max-width: 80%; /* Reduce un poco el tamaño en pantallas pequeñas */
+    }
+}
 
   
 /* Responsive Styles */

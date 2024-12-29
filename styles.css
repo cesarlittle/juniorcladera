@@ -513,7 +513,93 @@ button:hover {
     background-color: #ff0000;
 }
 
+/*Esta seccion es de la tabla*/
+.eventos {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra la tabla y el contenido horizontalmente */
+    text-align: left; /* Centra el contenido dentro del contenedor */
+    max-width: 1920px; /* Ancho máximo del contenedor */
+    margin: 0 auto; /* Centra horizontalmente */
+    padding: 20px; /* Espaciado interno */
+    padding-bottom: 120px;
+    background-color:#21212181;
+    background-size:cover
+    
+}
 
+.titulo {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centra horizontalmente el contenido del título */
+    gap: 10px;
+    margin-bottom: 20px;
+    color: #d3af62;
+}
+
+.titulo img {
+    height: 30px; /* Ajusta el tamaño de la bandera */
+}
+
+table {
+    margin: 0 auto; /* Centra la tabla horizontalmente */
+    width: 100%; /* Asegura que la tabla ocupe el ancho del contenedor */
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px 15px; /* Espaciado interno en celdas */
+    text-align: center; /* Centra texto dentro de las celdas */
+    border: 1px solid #d3af6200; /* Bordes de la tabla */
+}
+
+th {
+    font-weight: bold;
+    color: #d3af62; /* Color del encabezado */
+    text-align: left;
+}
+
+td {
+    color: #d3af62; /* Color del contenido */
+    text-align: left;
+}
+
+.btn {
+    background-color: #d3af62;
+    color: #121212;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #c2984e; /* Color más oscuro al pasar el cursor */
+}
+
+.comprar {
+    margin-top: 80px;
+}
+
+.btn-whatsapp {
+    background-color: #d3af62;
+    color: #121212;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    
+}
+
+.btn-whatsapp:hover {
+    background-color: #c2984e; /* Color más oscuro al pasar el cursor */
+}
+
+/**/
 /* Footer Styles */
 footer {
     text-align: center;
@@ -547,6 +633,24 @@ body {
     }
     .slider-controls {
        width: 100%;
+    }
+    th, td {
+        padding: 10px 15px; /* Espaciado interno en celdas */
+        text-align: center; /* Centra texto dentro de las celdas */
+        border: 1px solid #d3af6200; /* Bordes de la tabla */
+    }
+    .eventos {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Centra la tabla y el contenido horizontalmente */
+        text-align: left; /* Centra el contenido dentro del contenedor */
+        max-width: auto; /* Ancho máximo del contenedor */
+        margin: 0 auto; /* Centra horizontalmente */
+        padding: 20px; /* Espaciado interno */
+        padding-bottom: 120px;
+        background-color:#21212181;
+        background-size:cover
+        
     }
 }
 @media (max-width: 768px) { /* Puedes ajustar este valor dependiendo del tamaño en que quieras que se aplique */

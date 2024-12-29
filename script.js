@@ -128,3 +128,18 @@ document.querySelector('.hamburger-menu').addEventListener('click', function() {
     const navLinks = document.querySelector('.nav-links');
     navLinks.classList.toggle('show'); // Alterna la visibilidad del menú
 });
+//Este es el segmento de los ticket!! Recordatorio para mi despistez cambia las alertas por los enlaces reales
+
+// document.querySelectorAll('.btn').forEach(button => {
+//     button.addEventListener('click', () => {
+//         alert('Redirigiendo a la compra de tickets...');
+//         // Aquí puedes agregar la redirección:
+//          window.location.href = 'https://www.maketicket.com.ve/evento/un-llanero-por-el-mundo';
+//     });
+// });
+
+// document.querySelector('.btn-whatsapp').addEventListener('click', () => {
+//     alert('Redirigiendo a WhatsApp...');
+//     // Aquí puedes agregar el enlace de WhatsApp:
+//      window.location.href = 'https://wa.link/lyg8o6';
+// });

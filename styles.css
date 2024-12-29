@@ -509,16 +509,29 @@ footer a {
 .enlace {
     color: red;
 }
+.container {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+body {
+    overflow-x: hidden;
+}
+* {
+    box-sizing: border-box;
+}
+   
+  
 /* Responsive Styles */
 @media (max-width: 768px) {
     iframe {
         width: 100%;
     }
     .slider-controls {
-       width: ;
+       width: 100%;
     }
     .slider-controls2 {
-        width: ;
+        width: 100%;
     }
 }
 @media (max-width: 768px) { /* Puedes ajustar este valor dependiendo del tamaño en que quieras que se aplique */
@@ -551,7 +564,23 @@ footer a {
         display: block; /* Muestra el menú cuando la clase 'show' es agregada */
     }
 }
-
+@media (max-width: 768px) {
+    .container {
+      padding: 10px;
+    }
+    
+    .element {
+      width: 100%;
+      margin: 0;
+    }
+  }
+  @media (max-width: 768px) {
+    .element {
+      margin: 0;
+      padding: 0;
+    }
+  }
+  
 
 @media (max-width: 768px) {
     header {

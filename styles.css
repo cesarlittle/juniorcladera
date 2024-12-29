@@ -562,17 +562,23 @@ footer a {
         flex-wrap: wrap;
         gap: 10px;
         padding-left: 45px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
     }
     .logo {
         margin: 10px 0;
-        align-self: center;
-        margin-right: 128px;
+        align-self: center;        
+        flex-wrap: wrap;
+        justify-content: space-between;
+       
     }
     .socials {
         flex-wrap: wrap;
         justify-content: space-between;
         width: 100%;
         padding-left: 40px;
+        
     }
     * {
         box-sizing: border-box;
@@ -631,7 +637,7 @@ footer a {
         text-align: center;   
         position:relative;
         top: 170px;
-        right: 120px;   
+        right: 220px;   
         
     }
     .ecommerce {

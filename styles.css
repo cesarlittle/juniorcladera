@@ -111,7 +111,7 @@ section {
     background-position: center;
     width: 100%;
     max-width: 1920px; /* Ajusta el ancho máximo */
-    height: 700px; /* Ajusta la altura */
+    height: 800px; /* Ajusta la altura */
     cursor: pointer; /* Indica que es clicable */
     border-radius: 8px; /* Opcional: redondear bordes */
     margin-bottom: 20px; /* Espaciado con el contenido */

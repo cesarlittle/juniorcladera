@@ -625,6 +625,49 @@ body {
 * {
     box-sizing: border-box;
 }    
+/* Contenedor de la tabla para permitir desplazamiento horizontal */
+.tabla-contenedor {
+    width: 100%;
+    overflow-x: auto;
+    margin: 0 auto;
+}
+
+/* Tabla responsive */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed; /* Ajusta las columnas automáticamente */
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    white-space: nowrap; /* Evita el texto dividido en varias líneas */
+    overflow: hidden; /* Oculta contenido que exceda el ancho */
+    text-overflow: ellipsis; /* Agrega puntos suspensivos si el texto es muy largo */
+}
+
+/* Ajustes para dispositivos móviles */
+@media (max-width: 768px) {
+    table {
+        font-size: 12px; /* Reduce el tamaño de la fuente */
+    }
+
+    th, td {
+        padding: 8px; /* Reduce los márgenes */
+    }
+
+    .btn {
+        font-size: 12px; /* Botones más pequeños */
+        padding: 5px 10px;
+    }
+
+    .btn-whatsapp {
+        width: 100%; /* Botón ocupará todo el ancho */
+        margin-top: 10px;
+    }
+}
+
   
 /* Responsive Styles */
 @media (max-width: 768px) {
@@ -634,25 +677,9 @@ body {
     .slider-controls {
        width: 100%;
     }
-    th, td {
-        padding: 10px 15px; /* Espaciado interno en celdas */
-        text-align: center; /* Centra texto dentro de las celdas */
-        border: 1px solid #d3af6200; /* Bordes de la tabla */
-    }
-    .eventos {
-        display: flex;
-        flex-direction: column;
-        align-items: center; /* Centra la tabla y el contenido horizontalmente */
-        text-align: left; /* Centra el contenido dentro del contenedor */
-        max-width: auto; /* Ancho máximo del contenedor */
-        margin: 0 auto; /* Centra horizontalmente */
-        padding: 20px; /* Espaciado interno */
-        padding-bottom: 120px;
-        background-color:#21212181;
-        background-size:cover
-        
-    }
+ 
 }
+
 @media (max-width: 768px) { /* Puedes ajustar este valor dependiendo del tamaño en que quieras que se aplique */
     .tour { /* Clase de tu imagen principal */
         background-image: url('public/img/POSTER_VENEZUELA.png');

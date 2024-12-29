@@ -103,26 +103,33 @@
         <div class="join-form">
             <h1>ÚNETE</h1>
             <h6>Recibe las últimas noticias y lanzamientos de Junior Caldera</h6>
-            
+    
             <!-- Contenedor para email y país/ciudad -->
-            <form id="subscribeForm">
-                <div class="input-group">
-                    <input type="email" name="user_email" placeholder="EMAIL" required>
-                    <input type="text" name="user_location" placeholder="PAÍS/CIUDAD">
-                </div>
-                
-                <small>*CAMPOS OBLIGATORIOS</small>
-                <label class="checkbox-container">
-                    <input type="checkbox" class="checkbox" name="user_consent" required>
-                    Acepto recibir correos electrónicos de Junior Caldera
-                </label>
-                <small>Los correos electrónicos serán enviados por o en nombre de Zingalez Records. Puede retirar su consentimiento en cualquier momento.</small>
-                <button type="submit">SUSCRÍBETE</button>
-            </form>
+            <div class="input-group">
+                <input type="email" id="email" placeholder="EMAIL" required>
+                <input type="text" id="location" placeholder="PAÍS/CIUDAD">
+            </div>
+    
+            <small>*CAMPOS OBLIGATORIOS</small>
+            <label class="checkbox-container">
+                <input type="checkbox" class="checkbox">
+                Acepto recibir correos electrónicos de Junior Caldera
+            </label>
+            <small>Los correos electrónicos serán enviados por o en nombre de Zingalez Records. Puede retirar su consentimiento en cualquier momento.</small>
+            <button type="button" id="subscribeButton">SUSCRÍBETE</button>
         </div>
         <img src="public/img/juniorCaldera01.jpg" alt="Junior Caldera">
     </section>
     
+        <!-- Popup que aparece después de enviar el formulario -->
+        <div id="popup" class="popup hidden">
+            <div class="popup-content">
+                <p>¡Gracias por registrarte! Hemos recibido tus datos.</p>
+                <button id="closePopup">Cerrar</button>
+            </div>
+        </div>
+        
+    </section>    
 
     <footer>
         <p>ZINGALES RECORDS - <a href="#">TÉRMINOS Y CONDICIONES</a> - <a href="#">POLÍTICA DE PRIVACIDAD</a> - BOOKING</p>

@@ -102,18 +102,50 @@ joinForm.addEventListener("submit", (e) => {
         return;
     }
 
-    // Envía el correo usando EmailJS
-    emailjs.send("service_cend2y6", "template_uneuaza", {
-        email: email,
-        location: location,
-        consent: consent,
-    })
-    .then((response) => {
-        console.log("Correo enviado:", response.status, response.text);
-        alert("Gracias por registrarte. ¡Hemos recibido tus datos!");
-    })
-    .catch((error) => {
-        console.error("Error al enviar el correo:", error);
-        alert("Hubo un problema al enviar tus datos. Intenta nuevamente.");
+    // Inicializa EmailJS con tu USER_ID
+    emailjs.init("olq3-rovvp-UAh_tC");
+
+    // Selecciona el formulario y el botón
+    const joinForm = document.querySelector(".join-form");
+    const subscribeButton = document.querySelector("#subscribeButton");
+
+    subscribeButton.addEventListener("click", (e) => {
+        e.preventDefault(); // Evita la recarga de la página
+
+        // Obtén los valores de los campos
+        const email = document.querySelector('#email').value;
+        const location = document.querySelector('#location').value;
+        const consent = joinForm.querySelector('.checkbox').checked ? "Sí" : "No";
+
+        // Validación simple de email
+        if (!email) {
+            alert("Por favor, introduce un correo electrónico válido.");
+            return;
+        }
+
+        // Envía los datos utilizando EmailJS
+        emailjs.send("service_cend2y6", "template_uneuaza", {
+            email: email,
+            location: location,
+            consent: consent,
+        })
+        .then((response) => {
+            console.log("Correo enviado:", response.status, response.text);
+
+            // Mostrar popup de éxito
+            const popup = document.getElementById("popup");
+            popup.classList.remove("hidden");
+
+            // Escuchar el clic para cerrar el popup
+            const closePopup = document.getElementById("closePopup");
+            closePopup.addEventListener("click", () => {
+                popup.classList.add("hidden");
+            });
+        })
+        .catch((error) => {
+            console.error("Error al enviar el correo:", error);
+            alert("Hubo un problema al enviar tus datos. Intenta nuevamente.");
+        });
     });
+
 });

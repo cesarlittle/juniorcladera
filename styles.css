@@ -106,12 +106,12 @@ section {
 
 /* Imagen de fondo para la sección */
 .tour {
-    background-image: url('public/img/banner2.png');
+    background-image: url('public/img/banner\ new.png');
     background-size: cover;
     background-position: center;
     width: 100%;
     max-width: 1920px; /* Ajusta el ancho máximo */
-    height: 600px; /* Ajusta la altura */
+    height: 700px; /* Ajusta la altura */
     cursor: pointer; /* Indica que es clicable */
     border-radius: 8px; /* Opcional: redondear bordes */
     margin-bottom: 20px; /* Espaciado con el contenido */

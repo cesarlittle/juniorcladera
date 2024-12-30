@@ -696,7 +696,7 @@ th, td {
 
 @media (max-width: 768px) { /* Puedes ajustar este valor dependiendo del tamaño en que quieras que se aplique */
     .tour { /* Clase de tu imagen principal */
-        background-image: url('public/img/POSTER_VENEZUELA.png');
+        background-image: url('public/img/1920x1080grupoVERTICAL.png');
         background-size: cover;
         padding: 20px;
     }

@@ -137,7 +137,7 @@ section {
 }
 /* Botón */
 button {
-    background-color: red;
+    background-color: #d3af62;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -276,8 +276,8 @@ button:hover {
 }
 .slider2 button {
     background: transparent;
-    border: 2px solid red;
-    color: red;
+    border: 2px solid #d3af62;
+    color: #d3af62;
     border-radius: 15px;
     padding: 15px;
     text-align: center;
@@ -294,8 +294,8 @@ button:hover {
 
 .slider2-controls button {
     background: transparent;
-    border: 2px solid red;
-    color: red;
+    border: 2px solid #d3af62;
+    color: #d3af62;
     border-radius: 15px;
     padding: 15px;
     text-align: center;   
@@ -305,8 +305,8 @@ button:hover {
 }
 .slider1 button {
     background: transparent;
-    border: 2px solid red;
-    color: red;
+    border: 2px solid #d3af62;
+    color: #d3af62;
     border-radius: 15px;
     padding: 15px;
     text-align: center;
@@ -322,8 +322,8 @@ button:hover {
 
 .slider1-controls button {
     background: transparent;
-    border: 2px solid red;
-    color: red;
+    border: 2px solid #d3af62;
+    color: #d3af62;
     border-radius: 15px;
     padding: 15px;
     text-align: center;   
@@ -342,7 +342,7 @@ button:hover {
     
 }
 .boton-eco {
-    background-color: red;
+    background-color: #d3af62;
     color: rgb(0, 0, 0);
     border-radius: 7px;
     padding: 5px;
@@ -412,7 +412,7 @@ button:hover {
     width: 300px;
     margin: 10px 0;
     padding: 10px;
-    border: 2px solid red;
+    border: 2px solid #d3af62;
     border-radius: 5px;
     color: rgba(255,255,255, 0,7);
 }
@@ -432,7 +432,7 @@ button:hover {
     width: 18px; /* Ajusta el tamaño del checkbox */
     height: 18px;
     margin: 0; /* Elimina cualquier margen por defecto */
-    accent-color: red; /* Cambia el color del checkbox a rojo */
+    accent-color: #d3af62; /* Cambia el color del checkbox a rojo */
 }
 
 /* Estilo para el texto pequeño debajo */
@@ -446,7 +446,7 @@ button:hover {
 
 /* Botón de suscripción */
 .join-form button {
-    background-color: red;
+    background-color: #d3af62;
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -469,7 +469,7 @@ button:hover {
 .input-group input {
     width: 280px; /* Ajusta el ancho de los inputs */
     padding: 10px;
-    border: 2px solid red;
+    border: 2px solid #d3af62;
     border-radius: 10px;
     background: transparent;
     color: #fff;
@@ -502,7 +502,7 @@ button:hover {
 
 .popup-content button {
     padding: 10px 20px;
-    background-color: #c81111;
+    background-color: #d3af62;
     color: white;
     border: none;
     border-radius: 5px;
@@ -510,7 +510,7 @@ button:hover {
 }
 
 .popup-content button:hover {
-    background-color: #ff0000;
+    background-color: #d3af62;
 }
 
 /*Esta seccion es de la tabla*/
@@ -612,7 +612,7 @@ footer a {
     margin: 0 10px;
 }
 .enlace {
-    color: red;
+    color: #d3af62;
 }
 .container {
     width: 100%;
@@ -805,8 +805,8 @@ th, td {
 
     .slider-controls button {
         background: transparent;
-        border: 2px solid red;
-        color: red;
+        border: 2px solid #d3af62;
+        color: #d3af62;
         border-radius: 15px;
         padding: 15px;
         text-align: center;   

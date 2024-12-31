@@ -138,17 +138,19 @@ section {
 /* Botón */
 button {
     background-color: #d3af62;
-    color: white;
+    color: rgb(0, 0, 0);
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
     transition: background-color 0.3s;
+    font-weight: bold;
 }
 
 button:hover {
     background-color: #000000;
+    color: white;
 }
 
 /**/
@@ -682,6 +684,7 @@ th, td {
     }
     
 }
+
 /* Bandera */
 .bandera {
     max-width: 100%; /* La imagen nunca será más ancha que su contenedor */
@@ -789,6 +792,12 @@ th, td {
         justify-content: space-between;
         width: 100%;
         padding-left: 60px;
+        display: flex;
+        flex-direction: unset;
+        align-items: flex-start;
+        gap: 15px;
+        padding: 10px 20px;
+        
         
     }
     * {

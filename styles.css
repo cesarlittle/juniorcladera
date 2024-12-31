@@ -531,10 +531,11 @@ button:hover {
 .titulo {
     display: flex;
     align-items: center;
-    justify-content: center; /* Centra horizontalmente el contenido del título */
+    justify-content: flex-start; /* Centra horizontalmente el contenido del título */
     gap: 10px;
     margin-bottom: 20px;
     color: #d3af62;
+    width: 100%;
 }
 
 .titulo img {
@@ -666,13 +667,26 @@ th, td {
         width: 100%; /* Botón ocupará todo el ancho */
         margin-top: 10px;
     }
+    .titulo {
+        display: flex;
+        align-items: center;
+        justify-content: center; /* Centra horizontalmente el contenido del título */
+        gap: 10px;
+        margin-bottom: 20px;
+        color: #d3af62;
+    }
+    
+    .titulo img {
+        height: 30px; /* Ajusta el tamaño de la bandera */
+    }
+    
 }
 /* Bandera */
 .bandera {
     max-width: 100%; /* La imagen nunca será más ancha que su contenedor */
     height: auto; /* Mantiene la proporción de la imagen */
     display: block; /* Asegura que respete el flujo del documento */
-    margin: 0 auto; /* Centra la imagen horizontalmente */
+    margin: 10 auto; /* Centra la imagen horizontalmente */
 }
 
 /* Ajustes específicos para dispositivos móviles */

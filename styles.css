@@ -148,7 +148,7 @@ button {
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #000000;
 }
 
 /**/
@@ -597,7 +597,8 @@ td {
 }
 
 .btn-whatsapp:hover {
-    background-color: #c2984e; /* Color más oscuro al pasar el cursor */
+    background-color: #000000; /* Color más oscuro al pasar el cursor */
+    COLOR:white;
 }
 
 /**/

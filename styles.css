@@ -21,6 +21,7 @@ body {
     background-position: center; /* Centra la imagen */
     
     
+    
 }
 
 a {
@@ -804,6 +805,10 @@ th, td {
         padding: 10px 20px;
 
         
+    }
+    body {
+        background-size: cover;
+        background-position: center;
     }
     * {
         box-sizing: border-box;

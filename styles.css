@@ -59,10 +59,8 @@ header {
     height: auto;
     align-items: center;
 }
-/* Hacer que todos los desplazamientos sean suaves */
-html {
-    scroll-behavior: smooth;
-  }
+
+
 /* Estilos para el botón "Subir al Top" */
 #scrollTopBtn {
     position: fixed;
@@ -699,6 +697,7 @@ html, body {
     width: 100%;
     height: 100%;
     overflow-x: hidden; /* Evita el desbordamiento horizontal */
+    scroll-behavior: smooth; /* Hacer que todos los desplazamientos sean suaves */
 }
 .main-container {
     max-width: 100%;

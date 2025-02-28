@@ -20,17 +20,21 @@ scrollTopBtn.onclick = function() {
 document.addEventListener("DOMContentLoaded", function () {
     // Lista de canciones de Spotify (URLs de Spotify)
     const spotifyTracks = [
-        "https://open.spotify.com/embed/track/62mEKHjai7usrhyijNUxf8?utm_source=generator",
-        "https://open.spotify.com/embed/track/20Vc6KmPFJixmDq9ZkJdcZ?utm_source=generator",
+        "https://open.spotify.com/embed/album/5O4d4yL1EstXs2ZMMZ2LMS?utm_source=generator",
         "https://open.spotify.com/embed/track/6ediV9G8JCWHW8MHmly4Bd?utm_source=generator",
+        "https://open.spotify.com/embed/track/20Vc6KmPFJixmDq9ZkJdcZ?utm_source=generator",
+        "https://open.spotify.com/embed/track/62mEKHjai7usrhyijNUxf8?utm_source=generator",
     ];
 
     // Lista de canciones de YouTube (URLs de YouTube)
     const youtubeTracks = [
-        "https://www.youtube.com/embed/3I5YxtOfm0g",
-        "https://www.youtube.com/embed/VYymPJofH-Q",
-        "https://www.youtube.com/embed/g8H7w4rFHto",
+        "https://www.youtube.com/embed/4KEBSpOwgeE?si=sgzGC4tYtXppB5xY",
+        "https://www.youtube.com/embed/_Z3Mu38CUb4?si=OxQB2htojjNtIzJ7",
         "https://www.youtube.com/embed/QINJRlKwOXo",
+        "https://www.youtube.com/embed/g8H7w4rFHto",
+        "https://www.youtube.com/embed/VYymPJofH-Q",
+        "https://www.youtube.com/embed/3I5YxtOfm0g",
+
     ];
 
     let currentSpotifyIndex = 0; // Índice de la canción actual de Spotify
@@ -128,18 +132,3 @@ document.querySelector('.hamburger-menu').addEventListener('click', function() {
     const navLinks = document.querySelector('.nav-links');
     navLinks.classList.toggle('show'); // Alterna la visibilidad del menú
 });
-//Este es el segmento de los ticket!! Recordatorio para mi despistez cambia las alertas por los enlaces reales
-
-// document.querySelectorAll('.btn').forEach(button => {
-//     button.addEventListener('click', () => {
-//         alert('Redirigiendo a la compra de tickets...');
-//         // Aquí puedes agregar la redirección:
-//          window.location.href = 'https://www.maketicket.com.ve/evento/un-llanero-por-el-mundo';
-//     });
-// });
-
-// document.querySelector('.btn-whatsapp').addEventListener('click', () => {
-//     alert('Redirigiendo a WhatsApp...');
-//     // Aquí puedes agregar el enlace de WhatsApp:
-//      window.location.href = 'https://wa.link/lyg8o6';
-// });

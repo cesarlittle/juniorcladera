@@ -28,8 +28,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Lista de canciones de YouTube (URLs de YouTube)
     const youtubeTracks = [
-        "https://www.youtube.com/embed/4KEBSpOwgeE?si=sgzGC4tYtXppB5xY",
         "https://www.youtube.com/embed/_Z3Mu38CUb4?si=OxQB2htojjNtIzJ7",
+        "https://www.youtube.com/embed/4KEBSpOwgeE?si=sgzGC4tYtXppB5xY",
         "https://www.youtube.com/embed/QINJRlKwOXo",
         "https://www.youtube.com/embed/g8H7w4rFHto",
         "https://www.youtube.com/embed/VYymPJofH-Q",

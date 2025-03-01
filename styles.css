@@ -709,7 +709,8 @@ html, body {
 @media (max-width: 768px) { /* Puedes ajustar este valor dependiendo del tamaño en que quieras que se aplique */
     .tour { /* Clase de tu imagen principal */
         background-image: url('public/img/1920x1080grupo.png');
-        background-size: cover;
+        background-size:462px 600px;
+        background-repeat: no-repeat;
         padding: 20px;
     }
 }

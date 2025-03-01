@@ -115,7 +115,7 @@ section {
 
 /* Imagen de fondo para la sección */
 .tour {
-    background-image: url('public/img/1920x1080grupo.png');
+    background-image: url('public/img/1920x1080grupo.webp');
     background-size: cover;
     background-position: center;
     width: 100%;
@@ -708,7 +708,7 @@ html, body {
 
 @media (max-width: 768px) { /* Puedes ajustar este valor dependiendo del tamaño en que quieras que se aplique */
     .tour { /* Clase de tu imagen principal */
-        background-image: url('public/img/1920x1080grupo.png');
+        background-image: url('public/img/1920x1080grupo.webp');
         background-size:462px 600px;
         background-repeat: no-repeat;
         padding: 20px;

@@ -709,7 +709,7 @@ html, body {
 @media (max-width: 768px) { /* Puedes ajustar este valor dependiendo del tamaño en que quieras que se aplique */
     .tour { /* Clase de tu imagen principal */
         background-image: url('public/img/1920x1080grupo.webp');
-        background-size:462px 600px;
+        background-size:462px 550px;
         background-repeat: no-repeat;
         padding: 20px;
     }

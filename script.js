@@ -20,20 +20,29 @@ scrollTopBtn.onclick = function() {
 document.addEventListener("DOMContentLoaded", function () {
     // Lista de canciones de Spotify (URLs de Spotify)
     const spotifyTracks = [
-        "https://open.spotify.com/embed/album/5O4d4yL1EstXs2ZMMZ2LMS?utm_source=generator",
+        "https://open.spotify.com/embed/track/7IbeY6vm8uKY3BJSne8FlT?utm_source=generator",
+        "https://open.spotify.com/embed/track/59is1hDxW8vt7U1DrJ0wL5?utm_source=generator",
+        "https://open.spotify.com/embed/track/3MT6yckQlnXfbLLgMFIYc4?utm_source=generator",
         "https://open.spotify.com/embed/track/6ediV9G8JCWHW8MHmly4Bd?utm_source=generator",
         "https://open.spotify.com/embed/track/20Vc6KmPFJixmDq9ZkJdcZ?utm_source=generator",
         "https://open.spotify.com/embed/track/62mEKHjai7usrhyijNUxf8?utm_source=generator",
+        "https://open.spotify.com/embed/track/77LySeeDxPO92DDQkbihoo?utm_source=generator",        
+        "https://open.spotify.com/embed/track/7qEMYzGVK4Ul9YQtWdy1Wk?utm_source=generator",
+        "https://open.spotify.com/embed/track/3WVqwQjKQvC15983z1Jgxe?utm_source=generator",
+        "https://open.spotify.com/embed/track/5SEYBnzJX62CBzvjb1ctMD?utm_source=generator",
+        "https://open.spotify.com/embed/track/59is1hDxW8vt7U1DrJ0wL5?utm_source=generator"
     ];
 
     // Lista de canciones de YouTube (URLs de YouTube)
     const youtubeTracks = [
         "https://www.youtube.com/embed/_Z3Mu38CUb4?si=OxQB2htojjNtIzJ7",
+        "https://www.youtube.com/embed/_Z3Mu38CUb4?si=9W5sOYeH_hCO2Btf",
         "https://www.youtube.com/embed/4KEBSpOwgeE?si=sgzGC4tYtXppB5xY",
         "https://www.youtube.com/embed/QINJRlKwOXo",
         "https://www.youtube.com/embed/g8H7w4rFHto",
-        "https://www.youtube.com/embed/VYymPJofH-Q",
+        "https://www.youtube.com/embed/NIY8BiBVK1g?si=9diMDs_Rs59uyMrS",
         "https://www.youtube.com/embed/3I5YxtOfm0g",
+        "https://www.youtube.com/embed/U4H1tX2A-6o?si=T2H1pFg25duxRJ4R"
 
     ];
 

@@ -14,7 +14,7 @@ body {
     overflow-x: hidden;   
     margin: 0; /* Elimina los márgenes predeterminados */
     padding: 0; /* Elimina los paddings predeterminados */
-    background-image: url('public/img/1920x1080.png'); /* Cambia por la ruta de tu imagen */
+    background-image: url('public/img/backgroundiana.webp'); /* Cambia por la ruta de tu imagen */
     background-size: cover; /* La imagen cubre todo el fondo */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
     background-attachment: fixed; /* Fija el fondo */
@@ -39,7 +39,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color: #000;
+    background-color: #b70dc7;
     color: #fff;
     font-weight: bold;
     overflow-x: hidden
@@ -86,10 +86,12 @@ header {
     align-items: center;
     gap: 15px;
     padding-right: 65px;
+    color: white;
 }
 .socials img {
     width: 20px;
     height: auto;
+    color: white;
 }
 
 /* Section Styles */
@@ -115,7 +117,7 @@ section {
 
 /* Imagen de fondo para la sección */
 .tour {
-    background-image: url('public/img/LLANERO_COVERART.png');
+    background-image: url('public/img/vaso.webp');
     background-size: cover;
     background-position: center;
     width: 100%;
@@ -136,7 +138,8 @@ section {
 }
 /* Botón */
 button {
-    background-color: #d3af62;
+    /* background-color: #d3af62; */
+    background-color: #b70dc7;
     color: rgb(0, 0, 0);
     border: none;
     padding: 10px 20px;
@@ -247,8 +250,8 @@ button:hover {
 }
 .slider2 button {
     background: transparent;
-    border: 2px solid #d3af62;
-    color: #d3af62;
+    border: 2px solid #b70dc7;
+    color: #b70dc7;
     border-radius: 15px;
     padding: 15px;
     text-align: center;
@@ -265,8 +268,8 @@ button:hover {
 
 .slider2-controls button {
     background: transparent;
-    border: 2px solid #d3af62;
-    color: #d3af62;
+    border: 2px solid #b70dc7;
+    color: #b70dc7;
     border-radius: 15px;
     padding: 15px;
     text-align: center;   
@@ -276,8 +279,8 @@ button:hover {
 }
 .slider1 button {
     background: transparent;
-    border: 2px solid #d3af62;
-    color: #d3af62;
+    border: 2px solid #b70dc7;
+    color: #b70dc7;
     border-radius: 15px;
     padding: 15px;
     text-align: center;
@@ -293,8 +296,8 @@ button:hover {
 
 .slider1-controls button {
     background: transparent;
-    border: 2px solid #d3af62;
-    color: #d3af62;
+    border: 2px solid #b70dc7;
+    color: #b70dc7;
     border-radius: 15px;
     padding: 15px;
     text-align: center;   
@@ -313,7 +316,7 @@ button:hover {
     
 }
 .boton-eco {
-    background-color: #d3af62;
+    background-color: #b70dc7;
     color: rgb(0, 0, 0);
     border-radius: 7px;
     padding: 5px;
@@ -383,7 +386,7 @@ button:hover {
     width: 300px;
     margin: 10px 0;
     padding: 10px;
-    border: 2px solid #d3af62;
+    border: 2px solid #b70dc7;
     border-radius: 5px;
     color: rgba(255,255,255, 0,7);
 }
@@ -403,7 +406,7 @@ button:hover {
     width: 18px; /* Ajusta el tamaño del checkbox */
     height: 18px;
     margin: 0; /* Elimina cualquier margen por defecto */
-    accent-color: #d3af62; /* Cambia el color del checkbox a rojo */
+    accent-color: #b70dc7; /* Cambia el color del checkbox a rojo */
 }
 
 /* Estilo para el texto pequeño debajo */
@@ -417,7 +420,7 @@ button:hover {
 
 /* Botón de suscripción */
 .join-form button {
-    background-color: #d3af62;
+    background-color: #b70dc7;
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -440,7 +443,7 @@ button:hover {
 .input-group input {
     width: 280px; /* Ajusta el ancho de los inputs */
     padding: 10px;
-    border: 2px solid #d3af62;
+    border: 2px solid #b70dc7;
     border-radius: 10px;
     background: transparent;
     color: #fff;
@@ -473,7 +476,7 @@ button:hover {
 
 .popup-content button {
     padding: 10px 20px;
-    background-color: #d3af62;
+    background-color: #b70dc7;
     color: white;
     border: none;
     border-radius: 5px;
@@ -481,7 +484,7 @@ button:hover {
 }
 
 .popup-content button:hover {
-    background-color: #d3af62;
+    background-color: #b70dc7;
 }
 
 /*Esta seccion es de la tabla*/
@@ -505,7 +508,7 @@ button:hover {
     justify-content: flex-start; /* Centra horizontalmente el contenido del título */
     gap: 10px;
     margin-bottom: 20px;
-    color: #d3af62;
+    color: #b70dc7;
     width: 100%;
 }
 
@@ -527,17 +530,17 @@ th, td {
 
 th {
     font-weight: bold;
-    color: #d3af62; /* Color del encabezado */
+    color: #b70dc7 /* Color del encabezado */
     text-align: left;
 }
 
 td {
-    color: #d3af62; /* Color del contenido */
+    color: #b70dc7; /* Color del contenido */
     text-align: left;
 }
 
 .btn {
-    background-color: #d3af62;
+    background-color: #b70dc7;
     color: #121212;
     border: none;
     padding: 8px 12px;
@@ -548,7 +551,7 @@ td {
 }
 
 .btn:hover {
-    background-color: #c2984e; /* Color más oscuro al pasar el cursor */
+    background-color: #b70dc7; /* Color más oscuro al pasar el cursor */
 }
 
 .comprar {
@@ -556,7 +559,7 @@ td {
 }
 
 .btn-whatsapp {
-    background-color: #d3af62;
+    background-color: #b70dc7;
     color: #121212;
     border: none;
     padding: 10px 20px;
@@ -585,7 +588,7 @@ footer a {
     margin: 0 10px;
 }
 .enlace {
-    color: #d3af62;
+    color: #b70dc7;
 }
 .container {
     width: 100%;
@@ -645,7 +648,7 @@ th, td {
         justify-content: center; /* Centra horizontalmente el contenido del título */
         gap: 10px;
         margin-bottom: 20px;
-        color: #d3af62;
+        color: #b70dc7;
     }
     
     .titulo img {
@@ -708,7 +711,7 @@ html, body {
 
 @media (max-width: 768px) { /* Puedes ajustar este valor dependiendo del tamaño en que quieras que se aplique */
     .tour { /* Clase de tu imagen principal */
-        background-image: url('public/img/LLANERO_COVERART.png');
+        background-image: url('public/img/vaso.webp');
         background-size:462px 550px;
         background-repeat: no-repeat;
         padding: 20px;
@@ -839,8 +842,8 @@ html, body {
 
     .slider-controls button {
         background: transparent;
-        border: 2px solid #d3af62;
-        color: #d3af62;
+        border: 2px solid #b70dc7;
+        color: #b70dc7;
         border-radius: 15px;
         padding: 15px;
         text-align: center;   

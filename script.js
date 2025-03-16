@@ -20,6 +20,7 @@ scrollTopBtn.onclick = function() {
 document.addEventListener("DOMContentLoaded", function () {
     // Lista de canciones de Spotify (URLs de Spotify)
     const spotifyTracks = [
+        "https://open.spotify.com/embed/track/5TqT0S6qip8aBvkzpt5R9M?utm_source=generator",
         "https://open.spotify.com/embed/track/7IbeY6vm8uKY3BJSne8FlT?utm_source=generator",
         "https://open.spotify.com/embed/track/59is1hDxW8vt7U1DrJ0wL5?utm_source=generator",
         "https://open.spotify.com/embed/track/3MT6yckQlnXfbLLgMFIYc4?utm_source=generator",
@@ -35,6 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Lista de canciones de YouTube (URLs de YouTube)
     const youtubeTracks = [
+        "https://www.youtube.com/embed/9QMzwcNqdyA?si=-ZGR0iavGQSPj4fd",
         "https://www.youtube.com/embed/_Z3Mu38CUb4?si=OxQB2htojjNtIzJ7",
         "https://www.youtube.com/embed/_Z3Mu38CUb4?si=9W5sOYeH_hCO2Btf",
         "https://www.youtube.com/embed/4KEBSpOwgeE?si=sgzGC4tYtXppB5xY",

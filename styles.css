@@ -132,6 +132,7 @@ section {
 
 .tour {
     background-image: url('public/img/vaso.webp');
+    background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     width: 100%;

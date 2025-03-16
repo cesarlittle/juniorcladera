@@ -36,8 +36,18 @@ h1 {
         -1px 1px 0 #b70dc7;  /* Sombra superior derecha */
     font-size: 3rem; /* Tamaño del texto */
     text-align: center; /* Centrar el texto */
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+    /* font-family: "Allison", cursive;
+    font-weight: 400;
+    font-style: normal; */      
+           
 }
+.monoton-regular {
+    font-family: "Monoton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+  
+  
 button {
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;

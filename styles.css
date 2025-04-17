@@ -418,6 +418,7 @@ footer a:hover {
         align-items: flex-start;
         padding-left: 25px;
     }
+    
 
     .socials {
         padding-left: 25px;
@@ -451,5 +452,72 @@ footer a:hover {
 
     .input-group input {
         width: 100%;
+    }
+}
+/* Mobile Header */
+.header-mobile {
+    display: none;
+}
+
+.hamburger-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* Menú Mobile */
+@media (max-width: 768px) {
+    .header-mobile {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 10px 20px;
+    }
+    
+    .hamburger-btn {
+        display: block;
+        z-index: 1000;
+    }
+    
+    header {
+        flex-direction: column;
+        padding: 0;
+    }
+    
+    .menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #b70dc7;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        z-index: 999;
+        padding: 20px 0;
+    }
+    
+    .menu.active {
+        display: flex;
+    }
+    
+    .menu a {
+        padding: 15px 20px;
+        text-align: center;
+    }
+    
+    .socials {
+        display: none;
+        width: 100%;
+        justify-content: center;
+        padding: 15px 0;
+        background-color: #b70dc7;
+    }
+    
+    .socials.active {
+        display: flex;
     }
 }

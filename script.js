@@ -143,3 +143,31 @@ document.querySelector('.hamburger-menu').addEventListener('click', function() {
     const navLinks = document.querySelector('.nav-links');
     navLinks.classList.toggle('show'); // Alterna la visibilidad del menú
 });
+
+// Menú Hamburguesa
+document.addEventListener('DOMContentLoaded', function() {
+    const hamburgerBtn = document.querySelector('.hamburger-btn');
+    const menu = document.querySelector('.menu');
+    const socials = document.querySelector('.socials');
+    
+    hamburgerBtn.addEventListener('click', function() {
+        menu.classList.toggle('active');
+        socials.classList.toggle('active');
+        
+        // Cambia el ícono ☰ a ✕ cuando está activo
+        if (menu.classList.contains('active')) {
+            hamburgerBtn.textContent = '✕';
+        } else {
+            hamburgerBtn.textContent = '☰';
+        }
+    });
+    
+    // Cierra el menú al hacer clic en un enlace
+    document.querySelectorAll('.menu a').forEach(link => {
+        link.addEventListener('click', () => {
+            menu.classList.remove('active');
+            socials.classList.remove('active');
+            hamburgerBtn.textContent = '☰';
+        });
+    });
+});

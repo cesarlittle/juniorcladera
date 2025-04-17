@@ -202,6 +202,7 @@ button {
     font-size: 16px;
     transition: background-color 0.3s ease;
     font-weight: bold;
+    margin-top: 30px;
 }
 
 button:hover {
@@ -349,7 +350,7 @@ button:hover {
 
 .input-group input {
     width: 280px;
-    padding: 10px;
+    padding: 2px;
     border: 2px solid #b70dc7;
     border-radius: 10px;
     background: transparent;

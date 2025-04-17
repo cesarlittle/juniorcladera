@@ -42,7 +42,7 @@ h1 {
            
 }
 h4 {
-    color:burlywood
+    color:burlywood;
 
 }
 .titulosyellow {
@@ -262,9 +262,7 @@ button:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 20px;
-    /* background-image: url('public/img/fondo.jpg');
-    background-size: cover; */
+    gap: 20px;    
     padding: 50px 20px;
 }
 

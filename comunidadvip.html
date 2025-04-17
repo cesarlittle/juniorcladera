@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Únete a la Comunidad VIP - Junior Caldera TM</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="public/img/logo_ico.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
     <style>
         :root {
             --primary: #ffffff; /* Rojo característico */
@@ -14,12 +19,11 @@
         
         body {
             font-family: 'Arial', sans-serif;
-            background-color: var(--light);
+            background:#000000;
             color: var(--dark);
             line-height: 1.6;
-            max-width: 800px;
             margin: 0 auto;
-            padding: 20px;
+            
         }
         
         .header {
@@ -33,11 +37,15 @@
         }
         
         .disclaimer {
-            background-color: #f1f1f1;
+            background-color: #000000;
             padding: 15px;
-            border-left: 4px solid var(--primary);
+            /* border-left: 4px solid var(--primary); */
             margin-bottom: 30px;
             font-size: 0.9em;
+            text-align: left;    
+            max-width: 800px;
+            margin: auto;
+                   
         }
         
         .form-container {
@@ -45,6 +53,10 @@
             padding: 30px;
             border-radius: 8px;
             box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            max-width: 800px;
+            margin: auto;
+            
+            
         }
         
         .form-section {
@@ -116,11 +128,13 @@
         }
         
         .testimonial {
-            background: white;
+            background: rgb(0, 0, 0);
             padding: 20px;
             border-radius: 5px;
             margin-bottom: 15px;
             position: relative;
+            max-width: 800px;
+    margin: auto;
         }
         
         .testimonial:before {
@@ -135,7 +149,7 @@
         
         .testimonial-author {
             display: block;
-            text-align: right;
+            text-align: left;
             font-weight: bold;
             color: var(--primary);
         }
@@ -146,8 +160,9 @@
             font-size: 0.9em;
             color: #777;
         }
+        /* Header Styles
         /* Header Styles */
-        header {
+        /* header {
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -199,8 +214,8 @@
 
         .socials img:hover {
             transform: scale(1.1);
-        }
-    </style>
+        } */ */
+    </style> 
 </head>
 <body>
     <header>
@@ -223,10 +238,22 @@
     <div class="header">
         <!-- Aquí puedes incluir el logo de Junior Caldera -->
         <!-- <img src="img/logo-junior-caldera.png" alt="Junior Caldera" class="logo"> -->
-        <h1>Únete a la base oficial de fanáticos</h1>
+        <h2>LA REAL COMUNIDAD DEL LLANERO</h2>
+        <h4>Conectando corazones desde Venezuela al mundo.</h4>
+        <br>
+        <h2 class="titulosyellow">BENEFICIOS EXCLUSIVOS</h2>
     </div>
-    
+    <br>
+    <br>
+    <br>
+    <div class="header">
+        <h2 class="letrasblancas">FORMULARIO DE INSCRIPCIÓN</h2>
+        <h4>Recibe contenido exclusivo, participa en eventos especiales y sé parte de un<br>
+            espacio donde los verdaderos fans viven la experiencia completa del Llanero.</h4>
+
+    </div>
     <div class="disclaimer">
+        Completa tus datos para unirte a la base oficial de fanáticos de Junior Caldera. <br>
         🔒 Tu información es confidencial y será utilizada únicamente con fines informativos por Junior Caldera y Zingales Records.
     </div>
     
@@ -322,6 +349,7 @@
     
     <!-- Sección Testimonios -->
     <div class="testimonials">
+        <h2 class="letrasblancas">TESTIMONIOS</h2>
         <div class="testimonial">
             "Gracias a Junior me reencontré con mi tierra desde el corazón."
             <span class="testimonial-author">— @fanvenezolana</span>
@@ -333,8 +361,10 @@
         </div>
     </div>
     
-    <div class="footer">
-        La música se vive mejor cuando se comparte. Sé parte de La Real Comunidad del Llanero.
+    <div class="join">
+        <h2 class="letrasblancas">LA MÚSICA SE VIVE MEJOR CUANDO SE COMPARTE.<br> 
+            SÉ PARTE DE LA REAL COMUNIDAD DEL LLANERO.</h2>
+            <img src="public/img/juniorCaldera01.jpg" alt="Junior Caldera">
     </div>
 
     <!-- Validación del formulario -->
@@ -372,5 +402,12 @@
             // Aquí puedes añadir más validaciones si necesitas
         });
     </script>
+</body>
+<footer>
+    <p><a href="https://zingalesrecords.com/" target="_blank">ZINGALES RECORDS</a>- TÉRMINOS Y CONDICIONES -  POLÍTICA DE PRIVACIDAD - BOOKING</p>
+    <p>SITIO ELABORADO POR<a class="CLP" href="https://clickeame.net/" target="_blank">CLICKEAME.NET</a></p>
+</footer>
+<button id="scrollTopBtn" title="Subir al Top">↑</button>
+<script src="script.js"></script>
 </body>
 </html>

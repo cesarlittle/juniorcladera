@@ -41,6 +41,20 @@ h1 {
     font-style: normal; */      
            
 }
+h4 {
+    color:burlywood
+
+}
+.titulosyellow {
+    color:burlywood;
+    
+    
+    
+}
+.letrasblancas {
+    color: #fff;
+    text-align: center;
+}
 .monoton-regular {
     font-family: "Monoton", sans-serif;
     font-weight: 400;
@@ -69,6 +83,7 @@ header {
     overflow-x: hidden;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+
 
 .menu {
     display: flex;
@@ -248,8 +263,8 @@ button:hover {
     align-items: center;
     justify-content: center;
     gap: 20px;
-    background-image: url('public/img/fondo.jpg');
-    background-size: cover;
+    /* background-image: url('public/img/fondo.jpg');
+    background-size: cover; */
     padding: 50px 20px;
 }
 

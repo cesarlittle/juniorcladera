@@ -1,6 +1,6 @@
 <?php
 // Destinatario (cambia por tu email)
-$destinatario = "tucorreo@juniorcalderatm.com"; 
+$destinatario = "info@juniorcalderatm.com"; 
 
 // Datos del formulario
 $nombre = $_POST['nombre'] . " " . $_POST['apellido'];

@@ -139,60 +139,76 @@ form.addEventListener("submit", (e) => {
             console.error("Error al enviar los datos:", error);
         });
 });
-document.querySelector('.hamburger-menu').addEventListener('click', function() {
+document.querySelector('.hamburger-btn').addEventListener('click', function() {
     const navLinks = document.querySelector('.nav-links');
     navLinks.classList.toggle('show'); // Alterna la visibilidad del menú
 });
 
 // ========== MENÚ HAMBURGUESA ==========
 document.addEventListener('DOMContentLoaded', function() {
-    // Elementos del menú
-    const hamburgerBtn = document.querySelector('.hamburger-btn');
-    const menu = document.querySelector('.menu');
-    const socials = document.querySelector('.socials');
-    const menuLinks = document.querySelectorAll('.menu a');
-    
-    // Crear overlay
-    const overlay = document.createElement('div');
-    overlay.className = 'menu-overlay';
-    document.body.appendChild(overlay);
-    
-    // Función para abrir/cerrar menú
-    function toggleMenu() {
-        const isOpen = menu.classList.toggle('active');
+    // Solo ejecutar en mobile
+    if (window.innerWidth <= 768) {
+        // Elementos del DOM
+        const hamburgerBtn = document.querySelector('.hamburger-btn');
+        const originalMenu = document.querySelector('.menu');
+        const originalSocials = document.querySelector('.socials');
         
-        // Actualizar elementos
-        socials.classList.toggle('active', isOpen);
-        overlay.classList.toggle('active', isOpen);
-        hamburgerBtn.textContent = isOpen ? '✕' : '☰';
-        document.body.style.overflow = isOpen ? 'hidden' : '';
-    }
-    
-    // Función para cerrar menú
-    function closeMenu() {
-        menu.classList.remove('active');
-        socials.classList.remove('active');
-        overlay.classList.remove('active');
-        hamburgerBtn.textContent = '☰';
-        document.body.style.overflow = '';
-    }
-    
-    // Event listeners
-    hamburgerBtn.addEventListener('click', toggleMenu);
-    overlay.addEventListener('click', closeMenu);
-    
-    // Cerrar menú al hacer clic en enlaces
-    menuLinks.forEach(link => {
-        link.addEventListener('click', closeMenu);
-    });
-    
-    // Cerrar menú al redimensionar pantalla
-    window.addEventListener('resize', function() {
-        if (window.innerWidth > 768) {
-            closeMenu();
+        // Crear elementos móviles
+        const mobileMenu = originalMenu.cloneNode(true);
+        mobileMenu.classList.add('mobile-menu');
+        
+        const mobileSocials = originalSocials.cloneNode(true);
+        mobileSocials.classList.add('mobile-socials');
+        
+        const overlay = document.createElement('div');
+        overlay.className = 'menu-overlay';
+        
+        // Insertar elementos en el DOM
+        document.body.appendChild(mobileMenu);
+        document.body.appendChild(mobileSocials);
+        document.body.appendChild(overlay);
+        
+        // Ocultar menú original
+        originalMenu.style.display = 'none';
+        originalSocials.style.display = 'none';
+        
+        // Función para alternar menú
+        function toggleMenu() {
+            const isOpen = !mobileMenu.classList.contains('active');
+            
+            mobileMenu.classList.toggle('active', isOpen);
+            mobileSocials.classList.toggle('active', isOpen);
+            overlay.classList.toggle('active', isOpen);
+            hamburgerBtn.textContent = isOpen ? '✕' : '☰';
+            document.body.style.overflow = isOpen ? 'hidden' : '';
         }
-    });
+        
+        // Función para cerrar menú
+        function closeMenu() {
+            mobileMenu.classList.remove('active');
+            mobileSocials.classList.remove('active');
+            overlay.classList.remove('active');
+            hamburgerBtn.textContent = '☰';
+            document.body.style.overflow = '';
+        }
+        
+        // Event listeners
+        hamburgerBtn.addEventListener('click', toggleMenu);
+        overlay.addEventListener('click', closeMenu);
+        
+        // Cerrar menú al hacer clic en enlaces
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', closeMenu);
+        });
+        
+        // Cerrar menú al redimensionar
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 768) {
+                closeMenu();
+            }
+        });
+    }
     
-    // ========== (Mantén el resto de tu código JavaScript existente) ==========
-    // ... (tus funciones de scroll, formularios, etc.) ...
+    // ========== (Mantén el resto de tu código JavaScript) ==========
+    // ... (scroll, formularios, etc.) ...
 });

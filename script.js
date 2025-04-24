@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
         "https://open.spotify.com/embed/track/6ediV9G8JCWHW8MHmly4Bd?utm_source=generator",
         "https://open.spotify.com/embed/track/20Vc6KmPFJixmDq9ZkJdcZ?utm_source=generator",
         "https://open.spotify.com/embed/track/62mEKHjai7usrhyijNUxf8?utm_source=generator",
-        "https://open.spotify.com/embed/track/77LySeeDxPO92DDQkbihoo?utm_source=generator",        
+        "https://open.spotify.com/embed/track/77LySeeDxPO92DDQkbihoo?utm_source=generator",
         "https://open.spotify.com/embed/track/7qEMYzGVK4Ul9YQtWdy1Wk?utm_source=generator",
         "https://open.spotify.com/embed/track/3WVqwQjKQvC15983z1Jgxe?utm_source=generator",
         "https://open.spotify.com/embed/track/5SEYBnzJX62CBzvjb1ctMD?utm_source=generator",
@@ -62,9 +62,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
             currentSpotifyIndex = 0;
         } else {
-            currentSpotifyIndex = newIndex; 
+            currentSpotifyIndex = newIndex;
         }
-    
+
         const spotifyPlayer = document.getElementById("spotify-player");
         spotifyPlayer.src = spotifyTracks[currentSpotifyIndex];
     }
@@ -87,7 +87,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelector(".spotify-prev").addEventListener("click", () => {
         changeSpotifyTrack(currentSpotifyIndex - 1);
     });
-    
+
     document.querySelector(".spotify-next").addEventListener("click", () => {
         changeSpotifyTrack(currentSpotifyIndex + 1);
     });
@@ -144,30 +144,46 @@ document.querySelector('.hamburger-menu').addEventListener('click', function() {
     navLinks.classList.toggle('show'); // Alterna la visibilidad del menú
 });
 
-// Menú Hamburguesa
+// Menú Hamburguesa - Versión optimizada
 document.addEventListener('DOMContentLoaded', function() {
     const hamburgerBtn = document.querySelector('.hamburger-btn');
     const menu = document.querySelector('.menu');
     const socials = document.querySelector('.socials');
+    const menuLinks = document.querySelectorAll('.menu a');
     
-    hamburgerBtn.addEventListener('click', function() {
-        menu.classList.toggle('active');
+    // Función para alternar el menú
+    function toggleMenu() {
+        const isOpen = menu.classList.toggle('active');
         socials.classList.toggle('active');
         
-        // Cambia el ícono ☰ a ✕ cuando está activo
-        if (menu.classList.contains('active')) {
-            hamburgerBtn.textContent = '✕';
-        } else {
-            hamburgerBtn.textContent = '☰';
-        }
+        // Cambiar ícono y estado ARIA
+        hamburgerBtn.textContent = isOpen ? '✕' : '☰';
+        hamburgerBtn.setAttribute('aria-expanded', isOpen);
+        document.body.style.overflow = isOpen ? 'hidden' : 'auto';
+    }
+    
+    // Función para cerrar el menú
+    function closeMenu() {
+        menu.classList.remove('active');
+        socials.classList.remove('active');
+        hamburgerBtn.textContent = '☰';
+        hamburgerBtn.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = 'auto';
+    }
+    
+    // Evento para el botón hamburguesa
+    hamburgerBtn.addEventListener('click', toggleMenu);
+    
+    // Eventos para los enlaces del menú
+    menuLinks.forEach(link => {
+        link.addEventListener('click', closeMenu);
     });
     
-    // Cierra el menú al hacer clic en un enlace
-    document.querySelectorAll('.menu a').forEach(link => {
-        link.addEventListener('click', () => {
-            menu.classList.remove('active');
-            socials.classList.remove('active');
-            hamburgerBtn.textContent = '☰';
-        });
+    // Cerrar menú al hacer clic fuera de él
+    document.addEventListener('click', (e) => {
+        if (!e.target.closest('.menu') && !e.target.closest('.hamburger-btn') && 
+            !e.target.closest('.socials') && menu.classList.contains('active')) {
+            closeMenu();
+        }
     });
 });

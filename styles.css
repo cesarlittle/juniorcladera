@@ -477,15 +477,21 @@ footer a:hover {
         align-items: center;
         width: 100%;
         padding: 10px 20px;
+        background-color: #b70dc7;
     }
     
     .hamburger-btn {
         display: block;
-        z-index: 1000;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 28px;
+        cursor: pointer;
+        z-index: 1001;
     }
     
     header {
-        flex-direction: column;
+        position: relative;
         padding: 0;
     }
     
@@ -499,6 +505,7 @@ footer a:hover {
         left: 0;
         z-index: 999;
         padding: 20px 0;
+        transition: all 0.3s ease;
     }
     
     .menu.active {
@@ -520,5 +527,12 @@ footer a:hover {
     
     .socials.active {
         display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    
+    nav.menu, div.socials {
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
 }

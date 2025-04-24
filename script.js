@@ -144,46 +144,55 @@ document.querySelector('.hamburger-menu').addEventListener('click', function() {
     navLinks.classList.toggle('show'); // Alterna la visibilidad del menú
 });
 
-// Menú Hamburguesa - Versión optimizada
+// ========== MENÚ HAMBURGUESA ==========
 document.addEventListener('DOMContentLoaded', function() {
+    // Elementos del menú
     const hamburgerBtn = document.querySelector('.hamburger-btn');
     const menu = document.querySelector('.menu');
     const socials = document.querySelector('.socials');
     const menuLinks = document.querySelectorAll('.menu a');
     
-    // Función para alternar el menú
+    // Crear overlay
+    const overlay = document.createElement('div');
+    overlay.className = 'menu-overlay';
+    document.body.appendChild(overlay);
+    
+    // Función para abrir/cerrar menú
     function toggleMenu() {
         const isOpen = menu.classList.toggle('active');
-        socials.classList.toggle('active');
         
-        // Cambiar ícono y estado ARIA
+        // Actualizar elementos
+        socials.classList.toggle('active', isOpen);
+        overlay.classList.toggle('active', isOpen);
         hamburgerBtn.textContent = isOpen ? '✕' : '☰';
-        hamburgerBtn.setAttribute('aria-expanded', isOpen);
-        document.body.style.overflow = isOpen ? 'hidden' : 'auto';
+        document.body.style.overflow = isOpen ? 'hidden' : '';
     }
     
-    // Función para cerrar el menú
+    // Función para cerrar menú
     function closeMenu() {
         menu.classList.remove('active');
         socials.classList.remove('active');
+        overlay.classList.remove('active');
         hamburgerBtn.textContent = '☰';
-        hamburgerBtn.setAttribute('aria-expanded', 'false');
-        document.body.style.overflow = 'auto';
+        document.body.style.overflow = '';
     }
     
-    // Evento para el botón hamburguesa
+    // Event listeners
     hamburgerBtn.addEventListener('click', toggleMenu);
+    overlay.addEventListener('click', closeMenu);
     
-    // Eventos para los enlaces del menú
+    // Cerrar menú al hacer clic en enlaces
     menuLinks.forEach(link => {
         link.addEventListener('click', closeMenu);
     });
     
-    // Cerrar menú al hacer clic fuera de él
-    document.addEventListener('click', (e) => {
-        if (!e.target.closest('.menu') && !e.target.closest('.hamburger-btn') && 
-            !e.target.closest('.socials') && menu.classList.contains('active')) {
+    // Cerrar menú al redimensionar pantalla
+    window.addEventListener('resize', function() {
+        if (window.innerWidth > 768) {
             closeMenu();
         }
     });
+    
+    // ========== (Mantén el resto de tu código JavaScript existente) ==========
+    // ... (tus funciones de scroll, formularios, etc.) ...
 });

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,100 +10,108 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        (function () {
+            emailjs.init("aNXptCVJphrzVFQwh");
+        })();
+    </script>
     <style>
         :root {
-            --primary: #ffffff; /* Rojo característico */
+            --primary: #ffffff;
+            /* Rojo característico */
             --secondary: #2c3e50;
             --light: #000000;
             --dark: #b4b4b4;
         }
-        
+
         body {
             font-family: 'Arial', sans-serif;
-            background:#000000;
+            background: #000000;
             color: var(--dark);
             line-height: 1.6;
             margin: 0 auto;
-            
+
         }
-        
+
         .header {
             text-align: center;
             margin-bottom: 30px;
         }
-        
+
         .logo {
             max-width: 200px;
             margin-bottom: 20px;
         }
-        
+
         .disclaimer {
             background-color: #000000;
             padding: 15px;
             /* border-left: 4px solid var(--primary); */
             margin-bottom: 30px;
             font-size: 0.9em;
-            text-align: left;    
+            text-align: left;
             max-width: 800px;
             margin: auto;
-                   
+
         }
-        
+
         .form-container {
             background: rgb(34, 34, 34);
             padding: 30px;
             border-radius: 8px;
-            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
             max-width: 800px;
             margin: auto;
-            
-            
+
+
         }
-        
+
         .form-section {
             margin-bottom: 30px;
             padding-bottom: 20px;
             border-bottom: 1px solid #eee;
         }
-        
+
         .form-section h2 {
             color: var(--primary);
             margin-bottom: 20px;
         }
-        
+
         .form-group {
             margin-bottom: 20px;
         }
-        
+
         label {
             display: block;
             margin-bottom: 5px;
             font-weight: bold;
         }
-        
+
         label.required:after {
             content: " *";
             color: var(--primary);
         }
-        
-        input, select {
+
+        input,
+        select {
             width: 100%;
             padding: 10px;
             border: 1px solid #ddd;
             border-radius: 4px;
             box-sizing: border-box;
         }
-        
+
         .checkbox-group {
             margin: 15px 0;
         }
-        
+
         .checkbox-group label {
             display: inline;
             font-weight: normal;
             margin-left: 5px;
         }
-        
+
         .btn-submit {
             background-color: var(--primary);
             color: rgb(75, 75, 75);
@@ -117,18 +126,18 @@
             font-weight: bold;
             letter-spacing: 1px;
         }
-        
+
         .btn-submit:hover {
             background-color: #b7945e;
         }
-        
+
         .testimonials {
             margin-top: 40px;
             font-style: italic;
             max-width: 800px;
             margin: auto;
         }
-        
+
         .testimonial {
             background: rgb(0, 0, 0);
             padding: 20px;
@@ -138,9 +147,9 @@
             max-width: 800px;
             margin: auto;
         }
-        
+
         .testimonial:before {
-            content: """;
+            content: "" !important;
             font-size: 60px;
             color: var(--primary);
             opacity: 0.2;
@@ -148,98 +157,63 @@
             top: -10px;
             left: 5px;
         }
-        
+
         .testimonial-author {
             display: block;
             text-align: left;
             font-weight: bold;
             color: var(--primary);
         }
-        
+
         .footer {
             text-align: center;
             margin-top: 40px;
             font-size: 0.9em;
             color: #777;
         }
-        /* Header Styles
-        /* Header Styles */
-        /* header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 20px;
-            background-color: #b70dc7;
-            color: #fff;
-            font-weight: bold;
-            overflow-x: hidden;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
 
-        .menu {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            padding-left: 65px;
-        }
-
-        .menu a {
-            color: #fff;
-            font-weight: bold;
-            padding: 5px 10px;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
-
-        .menu a:hover {
-            background-color: rgba(255, 255, 255, 0.1);
-        }
-
-        .logo {
-            width: 40px;
-            height: auto;
-            align-items: center;
-        }
-
-        .socials {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            padding-right: 65px;
-        }
-
-        .socials img {
-            width: 20px;
-            height: auto;
-            transition: transform 0.3s ease;
-        }
-
-        .socials img:hover {
-            transform: scale(1.1);
-        } */ */
-    </style> 
+ 
+   
+    </style>
 </head>
+
 <body>
     <header>
         <div class="header-mobile">
-          <img src="public/img/logo.png" alt="Logo de Junior Caldera" class="logo" height="60px" />
-          <button class="hamburger-btn" aria-label="Menú">☰</button>
+            <img src="public/img/logo.png" alt="Logo de Junior Caldera" class="logo" height="60px" />
+            <button class="hamburger-btn" aria-label="Menú">☰</button>
         </div>
-    
+
         <nav class="menu desktop-only">
-          <a href="index.html#music">MÚSICA</a>
-          <a href="index.html#video">VIDEO</a>
-          <a href="comunidadvip.html">COMUNIDAD</a>
+            <a href="index.html#music">MÚSICA</a>
+            <a href="index.html#video">VIDEO</a>
+            <a href="comunidadvip.html">COMUNIDAD</a>
         </nav>
-    
+
         <div class="socials desktop-only">
-          <a href="https://open.spotify.com/intl-es/artist/0rwGV1HhNWK2Ta4rjmlmtp?si=T7kQdtuQQb2YXlm7YFGMHg" target="_blank"><img src="public/img/spotify.png" alt="Spotify" /></a>
-          <a href="https://www.youtube.com/@juniorcalderatm" target="_blank"><img src="public/img/youtube.png" alt="YouTube" /></a>
-          <a href="https://instagram.com/juniorcalderatm" target="_blank"><img src="public/img/instagram.png" alt="Instagram" /></a>
-          <a href="https://facebook.com/JuniorCalderaVE" target="_blank"><img src="public/img/facebook.png" alt="Facebook" /></a>
-          <!-- <a href="#join">SUSCRIBE</a> -->
+            <a href="https://open.spotify.com/intl-es/artist/0rwGV1HhNWK2Ta4rjmlmtp?si=T7kQdtuQQb2YXlm7YFGMHg"
+                target="_blank"><img src="public/img/spotify.png" alt="Spotify" /></a>
+            <a href="https://www.youtube.com/@juniorcalderatm" target="_blank"><img src="public/img/youtube.png"
+                    alt="YouTube" /></a>
+            <a href="https://instagram.com/juniorcalderatm" target="_blank"><img src="public/img/instagram.png"
+                    alt="Instagram" /></a>
+            <a href="https://facebook.com/JuniorCalderaVE" target="_blank"><img src="public/img/facebook.png"
+                    alt="Facebook" /></a>
+            <!-- <a href="#join">SUSCRIBE</a> -->
         </div>
-      </header>
+        <div class="mobile-menu">
+            <a href="index.html">MÚSICA</a>
+            <a href="index.html">VIDEO</a>
+            <a href="comunidadvip.html">COMUNIDAD</a>
+            <div class="mobile-socials">
+              <a href="https://open.spotify.com/" target="_blank"><img src="public/img/spotify.png" alt="Spotify" /></a>
+              <a href="https://youtube.com/" target="_blank"><img src="public/img/youtube.png" alt="YouTube" /></a>
+              <a href="https://instagram.com/" target="_blank"><img src="public/img/instagram.png" alt="Instagram" /></a>
+              <a href="https://facebook.com/" target="_blank"><img src="public/img/facebook.png" alt="Facebook" /></a>
+            </div>
+          </div>
+               
+    </header>
     <div class="header">
         <!-- Aquí puedes incluir el logo de Junior Caldera -->
         <!-- <img src="img/logo-junior-caldera.png" alt="Junior Caldera" class="logo"> -->
@@ -259,99 +233,108 @@
     </div>
     <div class="disclaimer">
         Completa tus datos para unirte a la base oficial de fanáticos de Junior Caldera. <br>
-        🔒 Tu información es confidencial y será utilizada únicamente con fines informativos por Junior Caldera y Zingales Records.
+        🔒 Tu información es confidencial y será utilizada únicamente con fines informativos por Junior Caldera y
+        Zingales Records.
     </div>
-    
+
     <div class="form-container">
-        <form id="formularioComunidad" action="procesar-formulario.php" method="POST">
+        <form id="custom-form">
             <!-- Sección Datos Personales -->
             <div class="form-section">
                 <h2>Datos personales</h2>
-                
+
                 <div class="form-group">
                     <label for="nombre" class="required">Nombre completo:</label>
                     <input type="text" id="nombre" name="nombre" required>
                 </div>
-                
+
                 <div class="form-group">
                     <label for="apellido" class="required">Apellido:</label>
                     <input type="text" id="apellido" name="apellido" required>
                 </div>
-                
+
                 <div class="form-group">
                     <label for="fecha_nacimiento">Fecha de nacimiento:</label>
                     <input type="text" id="fecha_nacimiento" name="fecha_nacimiento" placeholder="dd/mm/aaaa">
                 </div>
             </div>
-            
+
             <!-- Sección Ubicación -->
             <div class="form-section">
                 <h2>Ubicación</h2>
-                
+
                 <div class="form-group">
                     <label for="pais" class="required">País donde vives:</label>
                     <input type="text" id="pais" name="pais" required>
                 </div>
-                
+
                 <div class="form-group">
                     <label for="ciudad">Ciudad:</label>
                     <input type="text" id="ciudad" name="ciudad">
                 </div>
             </div>
-            
+
             <!-- Sección Contacto -->
             <div class="form-section">
                 <h2>Contacto</h2>
-                
+
                 <div class="form-group">
                     <label for="email" class="required">Correo electrónico:</label>
                     <input type="email" id="email" name="email" required>
                 </div>
-                
+
                 <div class="form-group">
                     <label for="confirmar_email" class="required">Confirmar correo:</label>
                     <input type="email" id="confirmar_email" name="confirmar_email" required>
                 </div>
-                
+
                 <div class="form-group">
                     <label for="whatsapp">Número de WhatsApp:</label>
                     <input type="tel" id="whatsapp" name="whatsapp">
                 </div>
             </div>
-            
+
             <!-- Sección Redes Sociales -->
             <div class="form-section">
                 <h2>Redes sociales (opcional)</h2>
-                
+
                 <div class="form-group">
                     <label for="instagram">Instagram:</label>
                     <input type="text" id="instagram" name="instagram" placeholder="@usuario">
                 </div>
-                
+
                 <div class="form-group">
                     <label for="tiktok">TikTok:</label>
                     <input type="text" id="tiktok" name="tiktok" placeholder="@usuario">
                 </div>
             </div>
-            
+
             <!-- Sección Preferencias -->
             <div class="form-section">
                 <h2>Preferencias</h2>
-                
+
                 <div class="checkbox-group">
                     <p>¿Deseas que te sumemos al grupo informativo de Junior (Telegram/WhatsApp)?</p>
                     <input type="checkbox" id="unirse_grupo" name="unirse_grupo" value="si">
                     <label for="unirse_grupo">Sí, quiero unirme</label><br>
-                    
+
                     <input type="checkbox" id="no_grupo" name="unirse_grupo" value="no">
                     <label for="no_grupo">No por ahora</label>
                 </div>
             </div>
-            
+
             <button type="submit" class="btn-submit">QUIERO SER PARTE</button>
         </form>
+
+        <div id="popup" style="display:none;">
+            <div class="popup-content">
+                <h2>¡Gracias por suscribirte!</h2>
+                <p>Hemos recibido tus datos. ¡Te mantendremos informado!</p>
+                <button onclick="closePopup()">Cerrar</button>
+            </div>
+        </div>
     </div>
-    
+
     <!-- Sección Testimonios -->
     <div class="testimonials">
         <h2 class="letrasblancas">TESTIMONIOS</h2>
@@ -359,60 +342,28 @@
             "Gracias a Junior me reencontré con mi tierra desde el corazón."
             <span class="testimonial-author">— @fanvenezolana</span>
         </div>
-        
+
         <div class="testimonial">
             "¡Lo conocí en persona gracias a esta comunidad! 🙌"
             <span class="testimonial-author">— @llanerafiel</span>
         </div>
     </div>
-    
     <div class="join">
-        <h2 class="letrasblancas">LA MÚSICA SE VIVE MEJOR CUANDO SE COMPARTE.<br> 
+        <h2 class="letrasblancas">LA MÚSICA SE VIVE MEJOR CUANDO SE COMPARTE.<br>
             SÉ PARTE DE LA REAL COMUNIDAD DEL LLANERO.</h2>
-            <img src="public/img/juniorCaldera01.jpg" alt="Junior Caldera">
     </div>
-
-    <!-- Validación del formulario -->
-    <script>
-        document.getElementById('formularioComunidad').addEventListener('submit', function(e) {
-            // Validar que los emails coincidan
-            const email = document.getElementById('email').value;
-            const confirmarEmail = document.getElementById('confirmar_email').value;
-            
-            if (email !== confirmarEmail) {
-                e.preventDefault();
-                alert('Los correos electrónicos no coinciden');
-                return false;
-            }
-            
-            // Validar campos requeridos
-            const requiredFields = document.querySelectorAll('[required]');
-            let isValid = true;
-            
-            requiredFields.forEach(field => {
-                if (!field.value.trim()) {
-                    field.style.borderColor = 'red';
-                    isValid = false;
-                } else {
-                    field.style.borderColor = '#ddd';
-                }
-            });
-            
-            if (!isValid) {
-                e.preventDefault();
-                alert('Por favor completa todos los campos obligatorios');
-                return false;
-            }
-            
-            // Aquí puedes añadir más validaciones si necesitas
-        });
-    </script>
+    <div class="join">
+        
+        <img src="public/img/juniorCaldera01.jpg" alt="Junior Caldera">
+    </div>
 </body>
 <footer>
-    <p><a href="https://zingalesrecords.com/" target="_blank">ZINGALES RECORDS</a>- TÉRMINOS Y CONDICIONES -  POLÍTICA DE PRIVACIDAD - BOOKING</p>
+    <p><a href="https://zingalesrecords.com/" target="_blank">ZINGALES RECORDS</a>- TÉRMINOS Y CONDICIONES - POLÍTICA DE
+        PRIVACIDAD - BOOKING</p>
     <p>SITIO ELABORADO POR<a class="CLP" href="https://clickeame.net/" target="_blank">CLICKEAME.NET</a></p>
 </footer>
 <button id="scrollTopBtn" title="Subir al Top">↑</button>
-<script src="script.js"></script>
+<script src="menu.js" defer></script>
+<script src="script.js" defer></script>
 </body>
 </html>

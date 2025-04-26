@@ -2,19 +2,19 @@
 const scrollTopBtn = document.getElementById('scrollTopBtn');
 
 // Cuando el usuario haga scroll, mostrar u ocultar el botón
-window.onscroll = function() {
-  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-    // Si el usuario hace scroll hacia abajo 100px, mostrar el botón
-    scrollTopBtn.style.display = 'block';
-  } else {
-    // Si el usuario está arriba, ocultar el botón
-    scrollTopBtn.style.display = 'none';
-  }
+window.onscroll = function () {
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        // Si el usuario hace scroll hacia abajo 100px, mostrar el botón
+        scrollTopBtn.style.display = 'block';
+    } else {
+        // Si el usuario está arriba, ocultar el botón
+        scrollTopBtn.style.display = 'none';
+    }
 };
 
 // Cuando el usuario haga clic en el botón, ir al top de la página
-scrollTopBtn.onclick = function() {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
+scrollTopBtn.onclick = function () {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
 };
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -111,104 +111,78 @@ function closePopup() {
     popup.style.display = "none";
 }
 
-// Manejar el envío del formulario
-form.addEventListener("submit", (e) => {
-    e.preventDefault(); // Evita la recarga de la página
+// Agregar loading state
+function setLoadingState(isLoading) {
+    const submitButton = form.querySelector('.btn-submit');
+    if (isLoading) {
+        submitButton.textContent = 'ENVIANDO...';
+        submitButton.disabled = true;
+    } else {
+        submitButton.textContent = 'QUIERO SER PARTE';
+        submitButton.disabled = false;
+    }
+}
 
-    // Crear un objeto FormData con los datos del formulario
-    const formData = new FormData(form);
+// Validar el formulario
+function validateForm() {
+    // Validar que los emails coincidan
+    const email = document.getElementById('email').value;
+    const confirmarEmail = document.getElementById('confirmar_email').value;
 
-    // Convertir FormData a URLSearchParams para enviar al servidor
-    const params = new URLSearchParams();
-    formData.forEach((value, key) => {
-        params.append(key, value);
+    if (email !== confirmarEmail) {
+        alert('Los correos electrónicos no coinciden');
+        return false;
+    }
+
+    // Validar campos requeridos
+    const requiredFields = document.querySelectorAll('[required]');
+    let isValid = true;
+
+    requiredFields.forEach(field => {
+        if (!field.value.trim()) {
+            field.style.borderColor = 'red';
+            isValid = false;
+        } else {
+            field.style.borderColor = '#ddd';
+        }
     });
 
-    // Enviar los datos usando fetch al endpoint de Google Forms
-    fetch(form.action, {
-        method: "POST",
-        body: params,
-        mode: "no-cors", // Necesario para evitar errores CORS con Google Forms
-    })
-        .then(() => {
-            // Mostrar el popup de confirmación
-            popup.style.display = "block";
-            form.reset(); // Limpiar los campos del formulario
-        })
-        .catch((error) => {
-            console.error("Error al enviar los datos:", error);
-        });
-});
-document.querySelector('.hamburger-btn').addEventListener('click', function() {
-    const navLinks = document.querySelector('.nav-links');
-    navLinks.classList.toggle('show'); // Alterna la visibilidad del menú
-});
-
-// ========== MENÚ HAMBURGUESA ==========
-document.addEventListener('DOMContentLoaded', function() {
-    // Solo ejecutar en mobile
-    if (window.innerWidth <= 768) {
-        // Elementos del DOM
-        const hamburgerBtn = document.querySelector('.hamburger-btn');
-        const originalMenu = document.querySelector('.menu');
-        const originalSocials = document.querySelector('.socials');
-        
-        // Crear elementos móviles
-        const mobileMenu = originalMenu.cloneNode(true);
-        mobileMenu.classList.add('mobile-menu');
-        
-        const mobileSocials = originalSocials.cloneNode(true);
-        mobileSocials.classList.add('mobile-socials');
-        
-        const overlay = document.createElement('div');
-        overlay.className = 'menu-overlay';
-        
-        // Insertar elementos en el DOM
-        document.body.appendChild(mobileMenu);
-        document.body.appendChild(mobileSocials);
-        document.body.appendChild(overlay);
-        
-        // Ocultar menú original
-        originalMenu.style.display = 'none';
-        originalSocials.style.display = 'none';
-        
-        // Función para alternar menú
-        function toggleMenu() {
-            const isOpen = !mobileMenu.classList.contains('active');
-            
-            mobileMenu.classList.toggle('active', isOpen);
-            mobileSocials.classList.toggle('active', isOpen);
-            overlay.classList.toggle('active', isOpen);
-            hamburgerBtn.textContent = isOpen ? '✕' : '☰';
-            document.body.style.overflow = isOpen ? 'hidden' : '';
-        }
-        
-        // Función para cerrar menú
-        function closeMenu() {
-            mobileMenu.classList.remove('active');
-            mobileSocials.classList.remove('active');
-            overlay.classList.remove('active');
-            hamburgerBtn.textContent = '☰';
-            document.body.style.overflow = '';
-        }
-        
-        // Event listeners
-        hamburgerBtn.addEventListener('click', toggleMenu);
-        overlay.addEventListener('click', closeMenu);
-        
-        // Cerrar menú al hacer clic en enlaces
-        mobileMenu.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', closeMenu);
-        });
-        
-        // Cerrar menú al redimensionar
-        window.addEventListener('resize', function() {
-            if (window.innerWidth > 768) {
-                closeMenu();
-            }
-        });
+    if (!isValid) {
+        alert('Por favor completa todos los campos obligatorios');
+        return false;
     }
-    
-    // ========== (Mantén el resto de tu código JavaScript) ==========
-    // ... (scroll, formularios, etc.) ...
+
+    return true;
+}
+
+// Manejar el envío del formulario
+form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    if (!validateForm()) {
+        return;
+    }
+
+    try {
+        setLoadingState(true);
+
+        const result = await emailjs.sendForm(
+            'service_0xl9net',
+            'template_cjv9g11',
+            form,
+            'aNXptCVJphrzVFQwh'
+        );
+
+        if (result.text === 'OK') {
+            popup.style.display = "block";
+            form.reset();
+        } else {
+            throw new Error('Error en el envío');
+        }
+    } catch (error) {
+        console.error("Error al enviar los datos:", error);
+        alert('Hubo un error al enviar el formulario. Por favor, intenta de nuevo.');
+    } finally {
+        setLoadingState(false);
+    }
 });
